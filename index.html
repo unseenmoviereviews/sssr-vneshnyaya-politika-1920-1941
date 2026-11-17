@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#141414">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Тема 2.5. Внешняя политика СССР в 1920–1930-е годы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#d2231c; --red-d:#9e1610; --ink:#141414; --paper:#efe5cf; --paper2:#e6d8b8;
+  --ochre:#d89a1e; --grey:#5b564c; --ok:#2f6b2a;
+  --head:'Oswald','Arial Narrow',Impact,sans-serif;
+  --body:'PT Serif',Georgia,'Times New Roman',serif;
+  --mono:'PT Mono','Courier New',monospace;
+  --safe-l:env(safe-area-inset-left,0px); --safe-r:env(safe-area-inset-right,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  background-image:radial-gradient(rgba(20,20,20,.05) 1px,transparent 1.4px),radial-gradient(rgba(160,120,60,.06) 1px,transparent 1.6px);
+  background-size:7px 7px,13px 13px;background-position:0 0,3px 5px;overflow-x:hidden}
+button,input,textarea,select{font:inherit;color:inherit}
+input,textarea{font-size:16px}
+a{color:var(--red-d)}
+.wrap{max-width:980px;margin:0 auto;padding:0 calc(18px + var(--safe-r)) 0 calc(18px + var(--safe-l))}
+
+/* ---------- poster header ---------- */
+.poster{position:relative;background:var(--ink);color:var(--paper);overflow:hidden;min-height:330px;isolation:isolate}
+.poster .wedge{position:absolute;inset:0;background:var(--red);clip-path:polygon(0 0,74% 0,40% 100%,0 100%);z-index:-1}
+.poster .rays{position:absolute;right:-120px;top:-120px;width:520px;height:520px;z-index:-1;opacity:.95}
+.poster .band{position:absolute;left:-10%;bottom:46px;width:130%;height:22px;background:var(--ochre);transform:rotate(-6deg);z-index:-1}
+.poster .inner{position:relative;padding:34px calc(20px + var(--safe-r)) 92px calc(20px + var(--safe-l));max-width:980px;margin:0 auto}
+.poster .kicker{font-family:var(--head);letter-spacing:.18em;text-transform:uppercase;font-size:14px;background:var(--ink);display:inline-block;padding:4px 10px}
+.poster h1{font-family:var(--head);font-weight:700;text-transform:uppercase;line-height:.95;margin:16px 0 10px;font-size:clamp(38px,9vw,86px);letter-spacing:-.01em;max-width:11ch}
+.poster h1 span{display:block;color:var(--ink);background:var(--paper);width:max-content;max-width:100%;padding:0 .12em;margin-top:.08em;transform:rotate(-2deg);transform-origin:left}
+.poster .sub{font-family:var(--head);font-size:clamp(16px,3.6vw,22px);text-transform:uppercase;letter-spacing:.04em;max-width:30ch}
+.poster .years{position:absolute;right:calc(18px + var(--safe-r));bottom:76px;font-family:var(--head);font-weight:700;font-size:clamp(30px,8vw,70px);color:var(--paper);background:var(--ink);padding:0 .15em;line-height:1.1}
+@media (max-width:560px){.poster .years{position:static;margin-top:14px;display:block}.poster .inner{padding-bottom:76px}.poster .wedge{clip-path:polygon(0 0,100% 0,30% 100%,0 100%)}.poster .rays{width:300px;height:300px;right:-120px;top:auto;bottom:-40px}}
+.poster.compact{min-height:0}.poster.compact .inner{padding-top:16px;padding-bottom:40px}.poster.compact h1{font-size:clamp(26px,6vw,44px);margin:10px 0 0}.poster.compact .kicker,.poster.compact .sub,.poster.compact .years,.poster.compact .rays{display:none}.poster.compact .band{bottom:14px;height:12px}
+.sim,.steps{scroll-margin-top:70px}
+
+/* ---------- user bar & nav ---------- */
+.userbar{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper);font-family:var(--head);letter-spacing:.04em;font-size:14px;text-transform:uppercase;border-bottom:4px solid var(--red)}
+.userbar .wrap{display:flex;gap:10px;align-items:center;min-height:48px;flex-wrap:wrap;padding-top:4px;padding-bottom:4px}
+.userbar .who{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.userbar button{background:none;border:2px solid var(--paper);color:var(--paper);padding:6px 10px;min-height:38px;font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+.userbar button.on{background:var(--red);border-color:var(--red)}
+.steps{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:14px 2px 10px;scrollbar-width:thin;scroll-snap-type:x proximity}
+.steps button{flex:0 0 auto;scroll-snap-align:start;border:3px solid var(--ink);background:var(--paper);padding:8px 12px;min-height:46px;font-family:var(--head);text-transform:uppercase;font-size:14px;letter-spacing:.04em;cursor:pointer;display:flex;gap:8px;align-items:center}
+.steps button b{display:inline-grid;place-items:center;width:26px;height:26px;background:var(--ink);color:var(--paper);border-radius:50%;font-size:14px}
+.steps button.cur{background:var(--red);color:#fff;border-color:var(--red)}
+.steps button.cur b{background:#fff;color:var(--red)}
+.steps button.done b{background:var(--ok)}
+
+/* ---------- generic blocks ---------- */
+main{padding-bottom:calc(60px + var(--safe-b))}
+.h2{font-family:var(--head);text-transform:uppercase;font-weight:700;font-size:clamp(28px,6vw,46px);line-height:1;margin:26px 0 8px;display:flex;align-items:flex-start;gap:12px}
+.h2 .n{flex:0 0 auto;background:var(--red);color:#fff;padding:4px 10px 2px;transform:rotate(-4deg);font-size:.8em}
+.lead{font-family:var(--head);font-size:18px;text-transform:uppercase;letter-spacing:.03em;color:var(--grey);margin:0 0 18px}
+.card{background:#f7f0de;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:18px 18px 16px;margin:0 0 26px;position:relative}
+.card.red{background:var(--red);color:#fff;box-shadow:7px 7px 0 var(--ink)}
+.card.red a{color:#fff}
+.card h3{font-family:var(--head);text-transform:uppercase;font-size:22px;line-height:1.1;margin:0 0 10px;letter-spacing:.02em}
+.card p{margin:0 0 .8em}
+.card p:last-child{margin-bottom:0}
+.tag{display:inline-block;font-family:var(--head);text-transform:uppercase;font-size:13px;letter-spacing:.08em;background:var(--ink);color:var(--paper);padding:2px 8px;margin:0 6px 8px 0}
+.tag.r{background:var(--red);color:#fff}
+.muted{color:var(--grey);font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:3px solid var(--ink);background:var(--ink);color:var(--paper);font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-size:17px;padding:10px 18px;min-height:50px;cursor:pointer;box-shadow:4px 4px 0 var(--red);transition:transform .08s}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--red)}
+.btn.alt{background:var(--paper);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff;box-shadow:4px 4px 0 var(--ink)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.nextbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 30px}
+label.f{display:block;font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;font-size:15px;margin:12px 0 6px}
+input.t,textarea.t{width:100%;border:3px solid var(--ink);background:#fffaf0;padding:10px 12px;border-radius:0;-webkit-appearance:none;appearance:none}
+textarea.t{min-height:110px;resize:vertical;line-height:1.5}
+input.t:focus,textarea.t:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(210,35,28,.25)}
+.cnt{font-family:var(--mono);font-size:13px;color:var(--grey);text-align:right;margin-top:4px}
+.q{margin:16px 0 4px;font-weight:700}
+
+/* ---------- home pair cards ---------- */
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:26px 0}
+@media (max-width:720px){.pairs{grid-template-columns:1fr}}
+.pair{border:3px solid var(--ink);background:#f7f0de;box-shadow:8px 8px 0 var(--ink);display:flex;flex-direction:column}
+.pair .top{background:var(--ink);color:var(--paper);padding:14px 16px;position:relative;overflow:hidden}
+.pair .top::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:var(--red);transform:rotate(30deg)}
+.pair .top .num{font-family:var(--head);font-size:56px;line-height:1;font-weight:700;position:relative;z-index:1}
+.pair .top .nm{font-family:var(--head);text-transform:uppercase;font-size:21px;line-height:1.1;position:relative;z-index:1;max-width:80%}
+.pair .body{padding:14px 16px 18px;flex:1;display:flex;flex-direction:column}
+.pair ol{margin:6px 0 16px;padding-left:22px}
+.pair ol li{margin:3px 0}
+.pair .btn{margin-top:auto;align-self:flex-start}
+.status{font-family:var(--head);text-transform:uppercase;font-size:14px;letter-spacing:.05em;margin:0 0 10px}
+.status.ok{color:var(--ok)}
+
+/* ---------- sorting ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 18px}
+.colhead{font-family:var(--head);text-transform:uppercase;padding:10px 12px;font-size:17px;line-height:1.15;border:3px solid var(--ink)}
+.colhead.a{background:var(--red);color:#fff}
+.colhead.b{background:var(--ink);color:var(--paper)}
+@media (max-width:640px){.cols{grid-template-columns:1fr}}
+.sortlist{display:grid;gap:12px}
+.scard{border:3px solid var(--ink);background:#fffaf0;padding:12px 14px;display:grid;gap:10px}
+.scard .yr{font-family:var(--head);font-size:15px;color:var(--red-d);letter-spacing:.05em}
+.scard .tx{font-weight:700;line-height:1.35}
+.scard .ch{display:flex;gap:8px;flex-wrap:wrap}
+.scard .ch button{flex:1 1 140px;min-height:46px;border:3px solid var(--ink);background:var(--paper);font-family:var(--head);text-transform:uppercase;font-size:14px;letter-spacing:.03em;cursor:pointer;padding:6px 8px}
+.scard .ch button.sel.a{background:var(--red);border-color:var(--red);color:#fff}
+.scard .ch button.sel.b{background:var(--ink);color:var(--paper)}
+.scard.right{border-color:var(--ok);box-shadow:inset 6px 0 0 var(--ok)}
+.scard.wrong{border-color:var(--red);box-shadow:inset 6px 0 0 var(--red)}
+.scard .ex{font-size:15px;color:var(--grey);display:none}
+.checked .scard .ex{display:block}
+.checked .scard .ch button{pointer-events:none}
+.scorebox{font-family:var(--head);font-size:24px;text-transform:uppercase;border:3px solid var(--ink);background:var(--ochre);display:inline-block;padding:6px 14px;margin:8px 0 14px;box-shadow:4px 4px 0 var(--ink)}
+
+/* ---------- documents ---------- */
+.doc{background:#fbf6e8;border:2px solid #8b8170;box-shadow:6px 6px 0 rgba(20,20,20,.85);padding:22px 20px 18px;margin:0 0 18px;position:relative;font-family:var(--mono);font-size:15.5px;line-height:1.6;overflow-wrap:break-word}
+.doc::before{content:"";position:absolute;left:0;top:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--red) 0 22px,var(--ink) 22px 44px)}
+.doc .dh{font-family:var(--head);text-transform:uppercase;font-size:20px;line-height:1.15;margin:4px 0 4px;letter-spacing:.02em}
+.doc .meta{font-family:var(--body);font-style:italic;font-size:15px;color:var(--grey);margin:0 0 12px}
+.doc p{margin:0 0 .7em}
+.doc .gap{color:var(--grey)}
+.stamp{display:inline-block;margin:2px 0 10px;border:3px solid var(--red);color:var(--red);font-family:var(--head);font-size:15px;letter-spacing:.12em;padding:2px 8px;transform:rotate(-3deg);opacity:.9}
+.docq{background:var(--paper2);border:3px solid var(--ink);padding:14px 16px;margin:-6px 0 28px}
+.docq .q:first-child{margin-top:0}
+.ctx{font-family:var(--body);font-size:16px;border-left:6px solid var(--ochre);padding:4px 0 4px 12px;margin:0 0 14px}
+
+/* ---------- dossier ---------- */
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:0 0 24px}
+.dgrid.two{grid-template-columns:repeat(2,1fr)}
+@media (max-width:860px){.dgrid,.dgrid.two{grid-template-columns:1fr}}
+.dos{border:3px solid var(--ink);background:#f7f0de;box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column}
+.dos .dt{background:var(--red);color:#fff;font-family:var(--head);text-transform:uppercase;padding:10px 12px;font-size:20px;line-height:1.1}
+.dos .dt small{display:block;font-size:14px;letter-spacing:.06em;opacity:.95;margin-top:3px}
+.dos dl{margin:0;padding:10px 12px 14px}
+.dos dt{font-family:var(--head);text-transform:uppercase;font-size:13px;letter-spacing:.08em;color:var(--red-d);margin-top:10px}
+.dos dt:first-child{margin-top:0}
+.dos dd{margin:2px 0 0;font-size:15.5px;line-height:1.45}
+.tl{list-style:none;margin:0 0 24px;padding:0;border-left:6px solid var(--ink)}
+.tl li{position:relative;padding:4px 0 14px 20px}
+.tl li::before{content:"";position:absolute;left:-13px;top:10px;width:20px;height:20px;background:var(--red);border:3px solid var(--ink);transform:rotate(45deg)}
+.tl .d{font-family:var(--head);text-transform:uppercase;font-size:16px;letter-spacing:.04em;color:var(--red-d);display:block}
+
+/* ---------- quiz ---------- */
+.qz{border:3px solid var(--ink);background:#f7f0de;padding:14px 16px;margin:0 0 16px}
+.qz .qt{font-weight:700;margin:0 0 10px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--ink);background:#fffaf0;padding:10px 12px;margin:0 0 8px;cursor:pointer;min-height:46px}
+.opt input{margin-top:5px;width:20px;height:20px;accent-color:var(--red);flex:0 0 auto}
+.opt.good{border-color:var(--ok);background:#e6efd9}
+.opt.bad{border-color:var(--red);background:#f6dcd6}
+.qz.locked .opt{cursor:default}
+
+/* ---------- simulation ---------- */
+.sim{border:3px solid var(--ink);background:var(--ink);color:var(--paper);box-shadow:8px 8px 0 var(--red);margin:0 0 26px}
+.sim .sh{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 14px;border-bottom:3px solid var(--red);font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+.sim .sb{padding:16px}
+.sim .date{font-family:var(--head);font-size:clamp(28px,7vw,48px);line-height:1;color:var(--red);text-transform:uppercase;margin:0 0 10px}
+.sim .sit{margin:0 0 14px}
+.sim .ops{display:grid;gap:10px;margin:0 0 12px}
+.sim .ops button{text-align:left;border:3px solid var(--paper);background:transparent;color:var(--paper);padding:12px 14px;cursor:pointer;line-height:1.4;min-height:50px;display:flex;gap:12px;align-items:flex-start}
+.sim .ops button b{font-family:var(--head);font-size:20px;line-height:1;flex:0 0 auto;color:var(--ochre)}
+.sim .ops button.sel{background:var(--red);border-color:var(--red)}
+.sim .ops button.real{outline:4px solid var(--ochre);outline-offset:-1px}
+.sim textarea.t{background:#262421;color:var(--paper);border-color:var(--paper)}
+.sim .fact{background:var(--paper);color:var(--ink);border-left:10px solid var(--red);padding:12px 14px;margin:12px 0 4px}
+.sim .fact h4{font-family:var(--head);text-transform:uppercase;margin:0 0 6px;font-size:18px}
+.sim .fact p{margin:0 0 .6em}
+.sim .fact p:last-child{margin:0}
+.prog{height:10px;background:#3a3732;margin:0}
+.prog i{display:block;height:100%;background:var(--red);transition:width .3s}
+
+/* ---------- misc ---------- */
+.pos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 22px}
+@media (max-width:760px){.pos{grid-template-columns:1fr}}
+.toast{position:fixed;left:50%;bottom:calc(18px + var(--safe-b));transform:translateX(-50%);background:var(--ink);color:var(--paper);border:3px solid var(--red);padding:10px 16px;font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;z-index:50;max-width:calc(100% - 30px);text-align:center;display:none}
+.missing{border:3px dashed var(--red);padding:10px 14px;background:#fbe6e1;margin:10px 0}
+.missing ul{margin:6px 0 0;padding-left:20px}
+footer{border-top:4px solid var(--ink);margin-top:20px;padding:16px 0 calc(24px + var(--safe-b));font-family:var(--head);text-transform:uppercase;font-size:13px;letter-spacing:.06em;color:var(--grey)}
+.hide{display:none!important}
+@media print{.userbar,.steps,.nextbar,.btn{display:none!important}.card,.doc,.dos{box-shadow:none}}
+</style>
+</head>
+<body>
+
+<header class="poster" id="poster" aria-label="Заголовок">
+  <div class="wedge"></div>
+  <svg class="rays" viewBox="0 0 520 520" aria-hidden="true">
+    <g fill="#141414"><path d="M260 260 L520 120 L520 170Z"/><path d="M260 260 L520 230 L520 280Z"/><path d="M260 260 L520 340 L520 390Z"/><path d="M260 260 L470 520 L420 520Z"/><path d="M260 260 L350 520 L300 520Z"/></g>
+    <circle cx="260" cy="260" r="92" fill="#efe5cf"/><circle cx="260" cy="260" r="56" fill="#d2231c"/>
+  </svg>
+  <div class="band"></div>
+  <div class="inner">
+    <div class="kicker">Тема 2.5 · История России · две пары</div>
+    <h1>От мировой революции<span>к 22 июня</span></h1>
+    <div class="sub">Внешняя политика СССР в 1920–1930-е годы. СССР накануне Великой Отечественной войны</div>
+    <div class="years">1920—1941</div>
+  </div>
+</header>
+
+<div class="userbar hide" id="userbar"><div class="wrap">
+  <div class="who" id="who"></div>
+  <button id="goHome" type="button">Пары</button>
+  <button id="goP1" type="button">Пара 1</button>
+  <button id="goP2" type="button">Пара 2</button>
+</div></div>
+
+<main class="wrap" id="app"></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<footer class="wrap">Тема 2.5 · Внешняя политика СССР 1920–1941 · Документы приведены по официальным публикациям</footer>
+
+<script>
+(function(){
+'use strict';
+var ENDPOINT='https://script.google.com/macros/s/AKfycbxfR5iirjNNm0-oK3ZWi1z-l9pYDhKWiVDwxsGPM0nNRvdgEoVjpjjD47HgPFrEcYNJ/exec';
+var KEY='tema25-sssr-vneshpol-v1';
+
+/* =================== CONTENT =================== */
+
+var SORT=[
+ {id:'s1',y:'Март 1919',t:'В Москве создан Коммунистический интернационал (Коминтерн), объединивший компартии разных стран.',k:'a',e:'Коминтерн задумывался как «генеральный штаб» мировой революции.'},
+ {id:'s2',y:'Апрель 1922',t:'РСФСР и Германия подписывают в Рапалло договор и восстанавливают дипломатические отношения.',k:'b',e:'Договор между государствами: взаимный отказ от претензий и режим наибольшего благоприятствования.'},
+ {id:'s3',y:'Июль–август 1920',t:'II конгресс Коминтерна принимает «21 условие» приёма партий в Интернационал.',k:'a',e:'Условия требовали создавать нелегальный аппарат и вести пропаганду в войсках.'},
+ {id:'s4',y:'1924',t:'Великобритания, Италия, Франция и ряд других стран признают СССР («полоса признания»).',k:'b',e:'Установление дипломатических отношений с капиталистическими державами.'},
+ {id:'s5',y:'Октябрь 1923',t:'Германские коммунисты при поддержке Коминтерна готовят вооружённое восстание; в Гамбурге оно подавлено.',k:'a',e:'Последняя крупная попытка «экспорта» революции в Европу в 1920-е гг.'},
+ {id:'s6',y:'Апрель 1926',t:'СССР и Германия заключают в Берлине договор о нейтралитете.',k:'b',e:'Берлинский договор подтвердил, что основой отношений остаётся Рапалльский договор.'},
+ {id:'s7',y:'1923–1927',t:'Советские советники (М. М. Бородин, В. К. Блюхер) работают при Гоминьдане и помогают китайской революции.',k:'a',e:'Курс на революцию в Китае рухнул в 1927 г., когда Чан Кайши порвал с коммунистами.'},
+ {id:'s8',y:'Ноябрь 1933',t:'СССР и США устанавливают дипломатические отношения.',k:'b',e:'Признание СССР крупнейшей державой, долго отказывавшейся от контактов.'},
+ {id:'s9',y:'1926',t:'Профсоюзы СССР перечисляют средства бастующим британским горнякам во время всеобщей стачки.',k:'a',e:'Поддержка рабочего движения за рубежом; в Лондоне это сочли вмешательством во внутренние дела. В 1927 г. Великобритания разорвала отношения с СССР.'},
+ {id:'s10',y:'Сентябрь 1934',t:'СССР вступает в Лигу Наций и получает постоянное место в её Совете.',k:'b',e:'Шаг к системе коллективной безопасности. В 1920 г. Коминтерн называл эту организацию бессильной.'},
+ {id:'s11',y:'Май 1935',t:'Подписаны договоры о взаимной помощи с Францией и Чехословакией.',k:'b',e:'Основа так и не созданного «Восточного пакта» коллективной безопасности.'},
+ {id:'s12',y:'1921',t:'В Москве создан Красный интернационал профсоюзов (Профинтерн) для борьбы с реформистскими профсоюзами Европы.',k:'a',e:'Одна из организаций, выполнявших 10-е из «21 условия».'}
+];
+
+var DOCS1=[
+ {id:'d1',title:'Условия приёма в Коммунистический Интернационал',meta:'Приняты II конгрессом Коминтерна, июль–август 1920 г. Выдержки.',stamp:'КОМИНТЕРН',
+  ctx:'Документ составлен в Москве. Партии, желавшие вступить в Коминтерн, должны были принять все условия без исключения.',
+  text:['3. Классовая борьба почти во всех странах Европы и Америки вступает в фазу гражданской войны. При таких условиях коммунисты не могут питать доверия к буржуазной законности. Они обязаны повсюду создавать параллельный нелегальный аппарат, который в решающую минуту мог бы помочь партии исполнить свой долг перед революцией. <span class="gap">(…)</span>',
+        '4. Долг распространения коммунистических идей включает в себя особенную необходимость настойчивой систематической пропаганды в войсках. <span class="gap">(…)</span>',
+        '6. Каждая партия, желающая принадлежать к III Интернационалу, обязана разоблачать не только откровенный социал-патриотизм, но и фальшь и лицемерие социал-пацифизма: систематически доказывать рабочим, что без революционного низвержения капитализма никакие международные третейские суды, никакие договоры об уменьшении вооружений, никакая «демократическая» реорганизация Лиги народов не спасут человечество от новых империалистических войн.'],
+  qs:[{id:'d1q1',q:'Какие методы действий пункты 3 и 4 требуют от компартий? Почему правительства европейских стран воспринимали их как угрозу?'},
+      {id:'d1q2',q:'Как пункт 6 оценивает Лигу Наций («Лигу народов»)? Как эта оценка соотносится со вступлением СССР в Лигу Наций в 1934 г.?'}]},
+ {id:'d2',title:'Договор между РСФСР и Германией, заключённый в Рапалло',meta:'16 апреля 1922 г. Подписали Г. В. Чичерин и В. Ратенау. Опубликован в «Известиях» 10 мая 1922 г. Выдержки.',stamp:'ОПУБЛИКОВАНО',
+  ctx:'Договор подписан во время Генуэзской конференции, на которой западные державы требовали от Советской России вернуть царские долги и иностранную собственность.',
+  text:['Статья 1. Оба правительства согласны, что разногласия между Германией и Российской Советской Республикой по вопросам, возникшим за время состояния этих государств в войне, регулируются на следующих основаниях:',
+        'а) Германское государство и РСФСР взаимно отказываются от возмещения их военных расходов, равно как и от возмещения военных убытков <span class="gap">(…)</span>',
+        'в) Германия и Россия взаимно отказываются от возмещения их расходов на военнопленных. <span class="gap">(…)</span>',
+        'Статья 2. Германия отказывается от претензий, вытекающих из факта применения до настоящего времени законов и мероприятий РСФСР к германским гражданам и их частным правам <span class="gap">(…)</span> при условии, что правительство РСФСР не будет удовлетворять аналогичных претензий других государств.',
+        'Статья 3. Дипломатические и консульские отношения между Германией и РСФСР немедленно возобновляются.',
+        'Статья 4. Оба правительства далее согласны в том, что для общего правового положения граждан одной стороны на территории другой и для общего урегулирования взаимных торговых и хозяйственных отношений, должен действовать принцип наибольшего благоприятствования.'],
+  qs:[{id:'d2q1',q:'От чего отказалась каждая из сторон? Что получила Советская Россия?'},
+      {id:'d2q2',q:'Почему статья 2 особенно не понравилась Англии и Франции, которые в Генуе требовали вернуть долги и национализированную собственность?'}]},
+ {id:'d3',title:'Договор о взаимной помощи между СССР и Французской Республикой',meta:'Париж, 2 мая 1935 г. Подписали В. П. Потёмкин и П. Лаваль. Выдержки.',stamp:'ОПУБЛИКОВАНО',
+  ctx:'Через две недели, 16 мая 1935 г., СССР подписал похожий договор с Чехословакией. По нему СССР обязывался помогать Чехословакии только в том случае, если помощь ей окажет и Франция.',
+  text:['Статья 2. В случае, если в условиях, предусмотренных в статье 15, параграф 7, статута Лиги Наций, СССР или Франция явились бы, несмотря на искренне мирные намерения обеих стран, предметом невызванного нападения со стороны какого-либо европейского государства, Франция и взаимно СССР окажут друг другу немедленно помощь и поддержку.',
+        '<b>Протокол подписания</b>',
+        'I. <span class="gap">(…)</span> Условлено также, что обязательства помощи, предусмотренные в настоящем Договоре, относятся лишь к случаю нападения, совершенного на собственную территорию той или другой Договаривающейся Стороны.'],
+  qs:[{id:'d3q1',q:'Как в этом договоре выражена идея коллективной безопасности? Против какого европейского государства он фактически был направлен?'},
+      {id:'d3q2',q:'Найдите в протоколе и в пояснении к документу условия, которые ослабляли договоры 1935 г. Чем это обернулось для Чехословакии в 1938 г.?'}]}
+];
+
+var DOCS2=[
+ {id:'d4',title:'Выступление М. М. Литвинова на Ассамблее Лиги Наций',meta:'Женева, 21 сентября 1938 г. Выдержки, перевод с английского.',stamp:'ЖЕНЕВА',
+  ctx:'За день до этого, 20 сентября, Англия и Франция потребовали от Чехословакии передать Германии районы, населённые судетскими немцами.',
+  text:['Не следует забывать, что Лига была создана как реакция на мировую войну и её неисчислимые ужасы; её целью было сделать эту войну последней, оградить все народы от агрессии и заменить систему военных союзов коллективной организацией помощи жертве агрессии. В этой области Лига ничего не сделала. Два государства, Эфиопия и Австрия, утратили самостоятельное существование вследствие насильственной агрессии. <span class="gap">(…)</span>',
+        'В настоящее время пятое государство, Чехословакия, терпит вмешательство во внутренние дела со стороны соседнего государства, и ему публично и громко угрожают нападением. <span class="gap">(…)</span>',
+        'Вот почему я должен прямо заявить здесь, что Советское правительство не несёт никакой ответственности за происходящие ныне события и за роковые последствия, которые могут неотвратимо из них вытекать. <span class="gap">(…)</span>',
+        'Связанный с Чехословакией пактом о взаимной помощи, Советский Союз воздерживался от всякого вмешательства в переговоры чехословацкого правительства с судетскими немцами, считая это внутренним делом чехословацкого государства.'],
+  qs:[{id:'d4q1',q:'В чём Литвинов обвиняет Лигу Наций? Какие примеры он приводит?'},
+      {id:'d4q2',q:'Зачем нарком заранее заявляет, что СССР «не несёт никакой ответственности»? Что он предвидит?'}]},
+ {id:'d5',title:'Соглашение между Германией, Великобританией, Францией и Италией',meta:'Мюнхен, 29 сентября 1938 г. Подписали А. Гитлер, Н. Чемберлен, Э. Даладье, Б. Муссолини. Выдержки.',stamp:'МЮНХЕН',
+  ctx:'Представителей Чехословакии на совещание не допустили, СССР не пригласили.',
+  text:['Германия, Соединенное Королевство, Франция и Италия, согласно уже принципиально достигнутому соглашению относительно уступки Судето-немецкой области, договорились о следующих условиях и формах этой уступки, а также о необходимых для этого мероприятиях <span class="gap">(…)</span>',
+        '1) Эвакуация начинается с 1 октября.',
+        '2) Соединенное Королевство, Франция и Италия согласились о том, что эвакуация территории будет закончена к 10 октября, причем не будет произведено никаких разрушений имеющихся сооружений, и что чехословацкое правительство несет ответственность за то, что эвакуация области будет проведена без повреждения указанных сооружений. <span class="gap">(…)</span>',
+        '<b>Приложение к соглашению</b> (перевод с английского)',
+        'Правительство Великобритании и правительство Франции присоединяются к настоящему соглашению на том основании, что они остаются при предложении <span class="gap">(…)</span> о международной гарантии новых границ Чехословацкого государства против неспровоцированной агрессии. Когда будет урегулирован вопрос о польском и венгерском меньшинствах в Чехословакии, Германия и Италия со своей стороны дадут гарантию Чехословакии.'],
+  qs:[{id:'d5q1',q:'Кто решает судьбу территории Чехословакии и кто несёт ответственность за эвакуацию? Что это говорит о положении самой Чехословакии?'},
+      {id:'d5q2',q:'Чего стоили обещанные гарантии новых границ? Вспомните, что произошло в марте 1939 г.'}]},
+ {id:'d6',title:'Договор о ненападении между Германией и Советским Союзом',meta:'Москва, 23 августа 1939 г. Подписали В. М. Молотов и И. Риббентроп. Опубликован в «Известиях» 24 августа 1939 г. Выдержки.',stamp:'ОПУБЛИКОВАНО',
+  ctx:'Договор вступал в силу сразу после подписания. Через девять дней Германия напала на Польшу.',
+  text:['Статья I. Обе Договаривающиеся Стороны обязуются воздерживаться от всякого насилия, от всякого агрессивного действия и всякого нападения в отношении друг друга как отдельно, так и совместно с другими державами.',
+        'Статья II. В случае, если одна из Договаривающихся Сторон окажется объектом военных действий со стороны третьей державы, другая Договаривающаяся Сторона не будет поддерживать ни в какой форме эту державу.',
+        'Статья IV. Ни одна из Договаривающихся Сторон не будет участвовать в какой-нибудь группировке держав, которая прямо или косвенно направлена против другой стороны.',
+        'Статья VI. Настоящий договор заключается сроком на десять лет <span class="gap">(…)</span>'],
+  qs:[{id:'d6q1',q:'Сравните статью II с договором 1935 г. с Францией. Что изменилось в отношении СССР к войне в Европе?'}]},
+ {id:'d7',title:'Секретный дополнительный протокол к Договору о ненападении',meta:'Москва, 23 августа 1939 г. Хранился в архиве МИД СССР, впервые опубликован в СССР в 1990 г. Полный текст.',stamp:'СТРОГО СЕКРЕТНО',
+  ctx:'Существование протокола советская сторона отрицала до 1989 г. 24 декабря 1989 г. Съезд народных депутатов СССР осудил протокол и признал его недействительным с момента подписания.',
+  text:['При подписании договора о ненападении между Германией и Союзом Советских Социалистических Республик нижеподписавшиеся уполномоченные обоих сторон обсудили в строго конфиденциальном порядке вопрос о разграничении сфер обоюдных интересов в Восточной Европе. Это обсуждение привело к нижеследующему результату:',
+        '1. В случае территориально-политического переустройства областей, входящих в состав Прибалтийских государств (Финляндия, Эстония, Латвия, Литва), северная граница Литвы одновременно является границей сфер интересов Германии и СССР. При этом интересы Литвы по отношению Виленской области признаются обоими сторонами.',
+        '2. В случае территориально-политического переустройства областей, входящих в состав Польского государства, граница сфер интересов Германии и СССР будет приблизительно проходить по линии рек Нарева, Вислы и Сана.',
+        'Вопрос, является ли в обоюдных интересах желательным сохранение независимого Польского государства и каковы будут границы этого государства, может быть окончательно выяснен только в течение дальнейшего политического развития.',
+        'Во всяком случае оба правительства будут решать этот вопрос в порядке дружественного обоюдного согласия.',
+        '3. Касательно юго-востока Европы с советской стороны подчеркивается интерес СССР к Бессарабии. С германской стороны заявляется о ее полной политической незаинтересованности в этих областях.',
+        '4. Этот протокол будет сохраняться обоими сторонами в строгом секрете.'],
+  qs:[{id:'d7q1',q:'Какие территории протокол отнёс к сфере интересов СССР? Составьте список.'},
+      {id:'d7q2',q:'Сопоставьте протокол с событиями сентября 1939 – августа 1940 гг. Какие пункты были выполнены и как?'}]},
+ {id:'d8',title:'Сообщение ТАСС',meta:'Передано по радио 13 июня, опубликовано в «Правде» 14 июня 1941 г. Выдержки.',stamp:'ТАСС',
+  ctx:'К этому времени у западной границы СССР было сосредоточено около 150 германских дивизий. Разведка и дипломаты сообщали в Москву о подготовке нападения.',
+  text:['<span class="gap">(…)</span> ТАСС заявляет, что:',
+        'Германия не предъявляла СССР никаких претензий и не предлагает какого-либо нового, более тесного соглашения, ввиду чего и переговоры на этот предмет не могли иметь места;',
+        'по данным СССР, Германия также неуклонно соблюдает условия советско-германского пакта о ненападении, как и Советский Союз, ввиду чего, по мнению советских кругов, слухи о намерении Германии порвать пакт и предпринять нападение на СССР лишены всякой почвы, а происходящая в последнее время переброска германских войск, освободившихся от операций на Балканах, в восточные и северо-восточные районы Германии связана, надо полагать, с другими мотивами, не имеющими касательства к советско-германским отношениям;',
+        'СССР, как это вытекает из его мирной политики, соблюдал и намерен соблюдать условия советско-германского пакта о ненападении, ввиду чего слухи о том, что СССР готовится к войне с Германией, являются лживыми и провокационными <span class="gap">(…)</span>'],
+  qs:[{id:'d8q1',q:'Кому, по-вашему, было адресовано это сообщение: советским гражданам, Берлину, Лондону? Аргументируйте.'},
+      {id:'d8q2',q:'Какие последствия могло иметь такое сообщение для армии и населения за неделю до 22 июня?'}]}
+];
+
+var DOS1=[
+ {t:'Испания',y:'1936–1939',rows:[
+  ['Что произошло','В июле 1936 г. часть армии во главе с генералом Ф. Франко подняла мятеж против Республики. Германия и Италия помогали мятежникам войсками и авиацией. Англия и Франция провели решение о «невмешательстве» и создали в Лондоне комитет по его контролю.'],
+  ['Действия СССР','С октября 1936 г. поставки оружия республике, в том числе 347 танков и сотни самолётов. В Испанию направлены военные советники и специалисты: по разным данным, от 1811 до 2084 человек, одновременно не более 600–800. Главные военные советники: Я. К. Берзин, Г. М. Штерн, К. М. Качанов. В оплату поставок в Москву был вывезен золотой запас Испании, около 510 т.'],
+  ['Потери','По одним данным, погибли в боях 127 советских военных, умерли от ран 11, пропали без вести 32.'],
+  ['Итог','Весной 1939 г. республика потерпела поражение, 28 марта Франко занял Мадрид. Германия и Италия опробовали в Испании новую технику, советские командиры получили боевой опыт; многие из них были репрессированы в 1937–1941 гг.']]},
+ {t:'Китай',y:'1937–1941',rows:[
+  ['Что произошло','7 июля 1937 г. Япония начала большую войну против Китая. Правительство Гоминьдана во главе с Чан Кайши обратилось за помощью к другим державам.'],
+  ['Действия СССР','21 августа 1937 г. подписан советско-китайский договор о ненападении. Операция «Z»: в 1937–1941 гг. Китаю поставлено более 1200 самолётов, а также орудия и боеприпасы, предоставлены кредиты на 250 млн долларов. Воевали советские лётчики-добровольцы (среди командиров Ф. П. Полынин, Г. И. Тхор, С. П. Супрун), работали военные советники.'],
+  ['Почему Чан Кайши','СССР помогал правительству, которое в 1927 г. разгромило китайских коммунистов. Пока Япония воевала в Китае, она не могла всей силой ударить по советскому Дальнему Востоку.'],
+  ['Итог','Помощь сократилась после заключения советско-японского пакта о нейтралитете 13 апреля 1941 г.']]},
+ {t:'Озеро Хасан',y:'29 июля — 11 августа 1938',rows:[
+  ['Что произошло','Японские войска заняли сопки Заозёрная и Безымянная у озера Хасан, на стыке границ СССР, Кореи и Маньчжоу-го. Япония считала эту территорию своей.'],
+  ['Командование','Маршал В. К. Блюхер (Дальневосточный фронт), Г. М. Штерн. С советской стороны в боях участвовало около 23 тыс. человек, танки и авиация.'],
+  ['Потери','СССР: около 960 погибших и пропавших без вести, свыше 3200 раненых и заболевших. Япония, по японским данным: 526 убитых, 914 раненых.'],
+  ['Итог','11 августа заключено перемирие, граница осталась по прежней линии. Главный военный совет РККА признал руководство боями неудовлетворительным. В октябре 1938 г. Блюхер был арестован и 9 ноября умер в тюрьме.']]}
+];
+
+var DOS2=[
+ {t:'Халхин-Гол',y:'11 мая — 16 сентября 1939',rows:[
+  ['Что произошло','Японская армия попыталась передвинуть границу Маньчжоу-го с Монголией на реку Халхин-Гол. СССР был связан с Монголией протоколом о взаимной помощи 1936 г.'],
+  ['Командование','Н. В. Фекленко, с июня Г. К. Жуков (1-я армейская группа), Г. М. Штерн, Я. В. Смушкевич (авиация), с монгольской стороны Х. Чойбалсан. 20 августа началось наступление, к концу месяца окружена и разгромлена японская 23-я пехотная дивизия.'],
+  ['Потери','СССР: от 9284 до 9703 погибших и пропавших без вести, 15 952 раненых и заболевших. Япония, по японским данным: 8440 погибших и пропавших, 8766 раненых.'],
+  ['Итог','Перемирие подписано в Москве 15 сентября 1939 г., через три недели после пакта с Германией. Поражение укрепило в Токио позиции сторонников войны на юге, против США и Великобритании. 13 апреля 1941 г. СССР и Япония заключили пакт о нейтралитете.']]},
+ {t:'Зимняя война',y:'30 ноября 1939 — 13 марта 1940',rows:[
+  ['Что произошло','В октябре–ноябре 1939 г. СССР потребовал от Финляндии отодвинуть границу на Карельском перешейке от Ленинграда (она проходила в 32 км от города) и сдать в аренду полуостров Ханко, предлагая взамен вдвое большую территорию в Карелии. Финляндия отказалась. После инцидента у Майнилы 26 ноября СССР начал войну. 1 декабря в Терийоках было объявлено «Народное правительство» во главе с О. В. Куусиненом.'],
+  ['Ход войны','Наступление в декабре остановилось у линии Маннергейма. 14 декабря 1939 г. СССР исключили из Лиги Наций. В феврале 1940 г. войска под командованием С. К. Тимошенко прорвали линию Маннергейма.'],
+  ['Потери','СССР: 126 875 погибших, умерших и пропавших без вести, 264 908 раненых. Финляндия: 25 904 погибших и пропавших, 43 557 раненых.'],
+  ['Итог','Московский мирный договор 12 марта 1940 г.: СССР получил Карельский перешеек с Выборгом, северное Приладожье, аренду Ханко на 30 лет. Финляндия сохранила независимость. В мае 1940 г. наркома обороны К. Е. Ворошилова сменил С. К. Тимошенко.']]}
+];
+
+var TL=[
+ ['17 сентября 1939','Красная армия переходит польскую границу. 28 сентября подписан германо-советский договор о дружбе и границе.'],
+ ['1–2 ноября 1939','Западная Украина включена в состав УССР, Западная Белоруссия в состав БССР.'],
+ ['28 сентября – 10 октября 1939','Договоры о взаимопомощи с Эстонией, Латвией и Литвой: на их территории размещаются советские военные базы. Литва получает Вильно.'],
+ ['14–16 июня 1940','Ультиматумы Литве, Латвии и Эстонии, ввод дополнительных частей Красной армии, смена правительств, выборы в июле.'],
+ ['26 июня – 3 июля 1940','Нота Румынии; советские войска входят в Бессарабию и Северную Буковину. 2 августа образована Молдавская ССР.'],
+ ['3–6 августа 1940','Литва, Латвия и Эстония приняты в состав СССР как союзные республики.']
+];
+
+var SIM=[
+ {d:'Март 1938',s:'12 марта германские войска вошли в Австрию, 13 марта объявлено о её присоединении к Германии (аншлюс). Лига Наций промолчала. Ясно, что следующей целью может стать Чехословакия, с которой у СССР договор о взаимопомощи.',
+  o:['Публично предложить великим державам немедленно обсудить коллективные меры против дальнейшей агрессии','Промолчать: Австрия не входит в зону интересов СССР','Начать тайные переговоры с Германией о разделе сфер влияния'],r:0,
+  f:'17 марта 1938 г. нарком М. М. Литвинов заявил о готовности СССР участвовать в коллективных действиях и предложил созвать совещание держав. Великобритания ответила, что такая конференция углубит раскол Европы. Предложение не поддержали.'},
+ {d:'Сентябрь 1938',s:'Гитлер требует отдать ему Судетскую область. Англия и Франция давят на Прагу. По договору 1935 г. СССР обязан помогать Чехословакии, только если поможет Франция. Общей границы с Чехословакией у СССР нет, Польша и Румыния отказываются пропускать Красную армию.',
+  o:['Помогать Чехословакии в одиночку, даже без Франции и без согласия Польши и Румынии на проход войск','Заявить о готовности выполнить договор вместе с Францией и через Лигу Наций, предупредить Польшу','Посоветовать Праге уступить, чтобы не воевать'],r:1,
+  f:'СССР подтвердил готовность выполнить обязательства при условии участия Франции и предложил обсудить вопрос в Лиге Наций. 23 сентября Польше было заявлено, что при её нападении на Чехословакию СССР денонсирует польско-советский договор о ненападении. В Киевском и Белорусском военных округах шли военные приготовления. 29–30 сентября в Мюнхене судьбу Чехословакии решили без неё и без СССР.'},
+ {d:'Апрель 1939',s:'15 марта 1939 г. Германия заняла Чехию. Англия дала гарантии Польше. 10 марта на XVIII съезде ВКП(б) Сталин предупредил, что СССР не позволит «провокаторам войны» втянуть страну в конфликт и «загребать жар чужими руками».',
+  o:['Предложить Англии и Франции договор о взаимной помощи трёх держав с военной конвенцией','Немедленно искать договорённости с Германией','Объявить нейтралитет и не участвовать в европейских делах'],r:0,
+  f:'17 апреля 1939 г. СССР предложил Англии и Франции договор о взаимопомощи и военную конвенцию с гарантиями странам от Балтики до Чёрного моря. Начались долгие переговоры. 3 мая Литвинова, главного сторонника коллективной безопасности, на посту наркома иностранных дел сменил В. М. Молотов. Эту замену в Берлине восприняли как знак, что Москва готова к переговорам и с Германией.'},
+ {d:'Май 1939',s:'На востоке японо-маньчжурские части переходят монгольскую границу у реки Халхин-Гол. У СССР с Монголией протокол о взаимной помощи 1936 г.',
+  o:['Обратиться в Лигу Наций и ограничиться протестом','Ввести войска и дать отпор, усилив группировку и командование','Отвести монгольские части, уступив спорную полосу'],r:1,
+  f:'СССР выполнил обязательства перед Монголией. В июне командование принял Г. К. Жуков. В августе японская группировка была окружена и разгромлена, 15 сентября подписано перемирие. Поражение подтолкнуло Японию к планам войны на юге, а не против СССР.'},
+ {d:'Август 1939',s:'12 августа в Москву приезжают военные миссии Англии и Франции во главе с адмиралом Р. Драксом и генералом Ж. Думенком. У Дракса нет письменных полномочий подписать соглашение. Польша по-прежнему отказывается пропускать Красную армию. Германия настойчиво предлагает договор о ненападении и готова обсуждать «сферы интересов».',
+  o:['Продолжать переговоры с Англией и Францией, сколько бы они ни длились','Принять предложение Германии и подписать договор о ненападении','Прервать все переговоры и ждать'],r:1,
+  f:'21 августа переговоры военных миссий были прерваны. 23 августа в Москву прилетел И. Риббентроп, в ту же ночь подписаны договор о ненападении и секретный дополнительный протокол о разделе сфер интересов в Восточной Европе. 1 сентября Германия напала на Польшу, 3 сентября Англия и Франция объявили Германии войну.'},
+ {d:'Сентябрь 1939',s:'Польская армия разбита на западе, правительство покидает Варшаву. Германия напоминает о секретном протоколе и предлагает советским войскам выступить.',
+  o:['Сохранять нейтралитет и не пересекать границу','Ввести войска в Западную Украину и Западную Белоруссию','Объявить войну Германии и помочь Польше'],r:1,
+  f:'17 сентября Красная армия перешла границу. Польскому послу вручили ноту, где говорилось, что Польское государство «фактически перестало существовать». 28 сентября подписан договор о дружбе и границе с Германией, Литва по новому протоколу отошла к советской сфере. 1–2 ноября новые земли вошли в УССР и БССР.'},
+ {d:'Ноябрь 1939',s:'Эстония, Латвия и Литва подписали договоры о взаимопомощи и пустили советские базы. Финляндия отказывается обменять часть Карельского перешейка и сдать в аренду Ханко. Граница проходит в 32 км от Ленинграда.',
+  o:['Продолжить переговоры и искать компромисс','Отказаться от требований','Начать войну'],r:2,
+  f:'30 ноября 1939 г. СССР начал войну. 14 декабря его исключили из Лиги Наций. Война продлилась 105 дней и стоила Красной армии более 126 тыс. погибших и пропавших без вести. Финляндия уступила территории, но сохранила независимость. Слабости РККА, показанные в войне, Германия учла при планировании нападения.'},
+ {d:'Июнь 1940',s:'Германия разгромила Францию: 22 июня подписано перемирие в Компьене. Англия осталась одна. По секретному протоколу Прибалтика и Бессарабия отнесены к советской сфере интересов.',
+  o:['Предъявить ультиматумы прибалтийским странам и Румынии, ввести войска','Ограничиться уже размещёнными базами','Предложить Англии союз против Германии'],r:0,
+  f:'14–16 июня 1940 г. Литве, Латвии и Эстонии предъявлены ультиматумы, введены дополнительные войска, сформированы новые правительства, в июле прошли выборы. 3–6 августа три страны вошли в СССР. 26 июня ноту получила Румыния, 28 июня – 3 июля советские войска вошли в Бессарабию и Северную Буковину.'},
+ {d:'Июнь 1941',s:'Разведка, дипломаты и перебежчики сообщают о сосредоточении германских войск у границы и называют разные даты нападения. Германия уверяет, что войска отведены на восток для отдыха перед высадкой в Англии. Перевооружение Красной армии не закончено.',
+  o:['Привести войска приграничных округов в полную боевую готовность, не боясь «спровоцировать» Германию','Опровергнуть слухи о войне и избегать шагов, которые Берлин может счесть провокацией','Нанести упреждающий удар первыми'],r:1,
+  f:'13–14 июня 1941 г. опубликовано сообщение ТАСС о том, что слухи о войне «лишены всякой почвы». Директива о приведении войск в боевую готовность была отправлена лишь в ночь на 22 июня и до многих частей не дошла. В 4 часа утра 22 июня Германия напала на СССР.'}
+];
+
+var TEST1=[
+ {q:'Где и когда был подписан договор, восстановивший дипломатические отношения РСФСР и Германии?',o:['В Генуе, в мае 1922 г.','В Рапалло, в апреле 1922 г.','В Локарно, в октябре 1925 г.','В Берлине, в апреле 1926 г.'],k:1},
+ {q:'С чьим именем связана концепция построения социализма в одной стране?',o:['Л. Д. Троцкий','Н. И. Бухарин','И. В. Сталин','Г. Е. Зиновьев'],k:2},
+ {q:'Кто возглавлял НКИД СССР в 1930–1939 гг.?',o:['Г. В. Чичерин','М. М. Литвинов','В. М. Молотов','А. А. Громыко'],k:1},
+ {q:'В каком году дипломатические отношения с СССР установили США?',o:['1924','1929','1933','1939'],k:2},
+ {q:'Когда СССР вступил в Лигу Наций?',o:['В январе 1920 г.','В сентябре 1934 г.','В мае 1935 г.','В марте 1938 г.'],k:1},
+ {q:'С какими странами СССР заключил договоры о взаимной помощи в мае 1935 г.?',o:['С Англией и Францией','С Польшей и Румынией','С Францией и Чехословакией','С Германией и Италией'],k:2},
+ {q:'Какие государства подписали Антикоминтерновский пакт в ноябре 1936 г.?',o:['Германия и Япония','Германия и Польша','Италия и Испания','Япония и Китай'],k:0},
+ {q:'Кто был главным противником СССР в боях у озера Хасан?',o:['Китай','Маньчжоу-го без участия Японии','Япония','Финляндия'],k:2},
+ {q:'Чем, по мнению Коминтерна в 1920 г., была Лига Наций?',o:['Гарантом мира','Организацией, неспособной спасти от войн без революционного низвержения капитализма','Союзником Советской России','Органом мировой революции'],k:1}
+];
+var TEST2=[
+ {q:'Кто подписал Мюнхенское соглашение 1938 г.?',o:['Гитлер, Чемберлен, Даладье, Муссолини','Гитлер, Чемберлен, Бенеш, Литвинов','Гитлер, Сталин, Чемберлен, Даладье','Риббентроп, Галифакс, Бонне, Чиано'],k:0},
+ {q:'Когда был подписан советско-германский договор о ненападении?',o:['1 сентября 1939 г.','23 августа 1939 г.','28 сентября 1939 г.','12 марта 1940 г.'],k:1},
+ {q:'По секретному протоколу граница сфер интересов в Польше проходила по линии рек…',o:['Буг и Днестр','Нарев, Висла, Сан','Одер и Нейсе','Неман и Западная Двина'],k:1},
+ {q:'Кто командовал советскими войсками в решающих боях на Халхин-Голе в августе 1939 г.?',o:['В. К. Блюхер','С. К. Тимошенко','Г. К. Жуков','К. А. Мерецков'],k:2},
+ {q:'Когда Красная армия перешла границу Польши?',o:['1 сентября 1939 г.','17 сентября 1939 г.','30 ноября 1939 г.','22 июня 1941 г.'],k:1},
+ {q:'Какое последствие имела для СССР война с Финляндией на международной арене?',o:['Вступление в Лигу Наций','Исключение из Лиги Наций','Разрыв договора с Германией','Союз с Англией'],k:1},
+ {q:'Какие территории СССР получил от Румынии летом 1940 г.?',o:['Закарпатье','Бессарабию и Северную Буковину','Добруджу','Трансильванию'],k:1},
+ {q:'Когда Литва, Латвия и Эстония были приняты в состав СССР?',o:['В сентябре 1939 г.','В марте 1940 г.','В августе 1940 г.','В июне 1941 г.'],k:2},
+ {q:'Что утверждало сообщение ТАСС от 14 июня 1941 г.?',o:['Что война с Германией неизбежна','Что слухи о намерении Германии напасть на СССР лишены почвы','Что СССР расторгает пакт с Германией','Что Германия предъявила СССР территориальные претензии'],k:1}
+];
+
+var PAIRS={
+ p1:{title:'От мировой революции к коллективной безопасности',span:'1920 – 1938',sheet:'Тема 2.5 · пара 1',
+  steps:[{id:'intro',n:'Две линии'},{id:'sort',n:'Сортировка'},{id:'docs',n:'Документы'},{id:'dos',n:'Досье'},{id:'test',n:'Тест'},{id:'send',n:'Сдать'}]},
+ p2:{title:'От Мюнхена до 22 июня',span:'1938 – 1941',sheet:'Тема 2.5 · пара 2',
+  steps:[{id:'sim',n:'Выбор наркома'},{id:'docs',n:'Документы'},{id:'dos',n:'Досье'},{id:'essay',n:'Эссе'},{id:'test',n:'Тест'},{id:'send',n:'Сдать'}]}
+};
+
+/* =================== STATE =================== */
+var st=load()||{name:'',group:'',id:'',ans:{},sort:{},sortChecked:false,sim:{},simWhy:{},t1:{},t2:{},t1done:false,t2done:false,essay:'',started:{},sent:{},view:'login',pair:null,step:0};
+function load(){try{var s=localStorage.getItem(KEY);return s?JSON.parse(s):null}catch(e){return null}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+var app=document.getElementById('app');
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function toast(m){var t=$('#toast');t.textContent=m;t.style.display='block';clearTimeout(toast.h);toast.h=setTimeout(function(){t.style.display='none'},2600)}
+function fmt(ts){if(!ts)return'';var d=new Date(ts);function p(n){return(n<10?'0':'')+n}return p(d.getDate())+'.'+p(d.getMonth()+1)+'.'+d.getFullYear()+' '+p(d.getHours())+':'+p(d.getMinutes())}
+function uid(){return 'T25-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,6).toUpperCase()}
+
+/* =================== RENDER =================== */
+function render(){
+  var ub=$('#userbar');$('#poster').classList.toggle('compact',st.view==='pair');
+  if(st.view==='login'){ub.classList.add('hide');renderLogin();return}
+  ub.classList.remove('hide');
+  $('#who').textContent=st.name+' · '+st.group;
+  $('#goHome').classList.toggle('on',st.view==='home');
+  $('#goP1').classList.toggle('on',st.view==='pair'&&st.pair==='p1');
+  $('#goP2').classList.toggle('on',st.view==='pair'&&st.pair==='p2');
+  if(st.view==='home')renderHome();else renderPair();
+}
+function renderLogin(){
+  app.innerHTML='<div class="h2" style="margin-top:30px"><span class="n">!</span><span>Кто работает</span></div>'+
+  '<div class="card"><p>Введите фамилию, имя и группу. Работа сохраняется в этом браузере: если закрыть страницу, ответы не пропадут. В конце каждой пары нажмите «Сдать работу», ответы уйдут преподавателю.</p>'+
+  '<label class="f" for="nm">Фамилия и имя</label><input class="t" id="nm" autocomplete="name" value="'+esc(st.name)+'">'+
+  '<label class="f" for="gr">Группа</label><input class="t" id="gr" value="'+esc(st.group)+'">'+
+  '<div style="margin-top:18px"><button class="btn red" id="go" type="button">Начать</button></div></div>';
+  $('#go').onclick=function(){
+    var n=$('#nm').value.trim(),g=$('#gr').value.trim();
+    if(n.length<3||n.indexOf(' ')<0){toast('Введите фамилию и имя');return}
+    if(!g){toast('Введите группу');return}
+    st.name=n;st.group=g;if(!st.id)st.id=uid();st.view='home';save();render();scrollTo(0,0);
+  };
+}
+function pairProgress(p){
+  if(p==='p1'){var a=0,t=0;DOCS1.forEach(function(d){d.qs.forEach(function(q){t++;if((st.ans[q.id]||'').trim().length>=15)a++})});
+    ['dosq1','dosq2','dosq3','introq'].forEach(function(k){t++;if((st.ans[k]||'').trim().length>=15)a++});
+    return {done:a+(st.sortChecked?1:0)+(st.t1done?1:0),all:t+2}}
+  var b=0,u=0;DOCS2.forEach(function(d){d.qs.forEach(function(q){u++;if((st.ans[q.id]||'').trim().length>=15)b++})});
+  ['dos2q1','dos2q2','dos2q3'].forEach(function(k){u++;if((st.ans[k]||'').trim().length>=15)b++});
+  return {done:b+Object.keys(st.sim).length+(st.t2done?1:0)+(wc(st.essay)>=150?1:0),all:u+SIM.length+2}
+}
+function renderHome(){
+  var h='<div class="h2"><span class="n">→</span><span>Две пары, один сайт</span></div><p class="lead">Выберите пару, которую проходите сейчас</p><div class="pairs">';
+  ['p1','p2'].forEach(function(p,i){var P=PAIRS[p],pr=pairProgress(p);
+    h+='<div class="pair"><div class="top"><div class="num">0'+(i+1)+'</div><div class="nm">'+P.title+'</div></div><div class="body">'+
+    '<div class="status'+(st.sent[p]?' ok':'')+'">'+(st.sent[p]?'Сдано · '+esc(st.sent[p]):'Выполнено: '+pr.done+' из '+pr.all)+'</div>'+
+    '<div class="muted">'+P.span+'</div><ol>'+P.steps.map(function(s){return'<li>'+s.n+'</li>'}).join('')+'</ol>'+
+    '<button class="btn'+(i?' red':'')+'" data-p="'+p+'" type="button">Открыть пару '+(i+1)+'</button></div></div>'});
+  h+='</div><div class="card"><h3>Как работать</h3><p>Пройдите этапы по порядку: кнопки этапов находятся вверху пары, их можно листать пальцем. Письменные ответы пишите своими словами, 2–4 предложения на вопрос. Тест в конце пары проверяется сразу. После теста откройте этап «Сдать» и отправьте работу.</p></div>';
+  app.innerHTML=h;
+  $$('[data-p]').forEach(function(b){b.onclick=function(){openPair(b.getAttribute('data-p'),0)}});
+}
+function openPair(p,step){st.view='pair';st.pair=p;st.step=step||0;if(!st.started[p])st.started[p]=Date.now();save();render();scrollTo(0,0)}
+function renderPair(){
+  var P=PAIRS[st.pair],s=P.steps[st.step];
+  var h='<nav class="steps" aria-label="Этапы">'+P.steps.map(function(x,i){return'<button type="button" data-s="'+i+'" class="'+(i===st.step?'cur':'')+(stepDone(st.pair,x.id)?' done':'')+'"><b>'+(i+1)+'</b>'+x.n+'</button>'}).join('')+'</nav>';
+  h+='<div id="stage"></div>';
+  h+='<div class="nextbar">'+(st.step>0?'<button class="btn alt" id="prev" type="button">← Назад</button>':'<span></span>')+
+     (st.step<P.steps.length-1?'<button class="btn" id="next" type="button">Дальше →</button>':'')+'</div>';
+  app.innerHTML=h;
+  $$('[data-s]').forEach(function(b){b.onclick=function(){st.step=+b.getAttribute('data-s');save();render();scrollTo(0,0)}});
+  var pv=$('#prev'),nx=$('#next');
+  if(pv)pv.onclick=function(){st.step--;save();render();scrollTo(0,0)};
+  if(nx)nx.onclick=function(){st.step++;save();render();scrollTo(0,0)};
+  var cur=$('.steps .cur');if(cur&&cur.scrollIntoView){try{cur.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
+  var stage=$('#stage');
+  var fn={p1:{intro:sIntro,sort:sSort,docs:function(e){sDocs(e,DOCS1,'Документы: 1920–1935','Прочитайте выдержки и ответьте на вопросы под каждым документом.')},dos:sDos1,test:function(e){sTest(e,TEST1,'t1','t1done')},send:sSend},
+          p2:{sim:sSim,docs:function(e){sDocs(e,DOCS2,'Документы: 1938–1941','Шесть документов от Женевы до сообщения ТАСС. Секретный протокол приведён полностью.')},dos:sDos2,essay:sEssay,test:function(e){sTest(e,TEST2,'t2','t2done')},send:sSend}};
+  fn[st.pair][s.id](stage);
+  window.scrollTo&&window.scrollTo(window.scrollX,window.scrollY);
+}
+function stepDone(p,id){
+  if(id==='sort')return st.sortChecked;
+  if(id==='test')return p==='p1'?st.t1done:st.t2done;
+  if(id==='sim')return Object.keys(st.sim).length===SIM.length;
+  if(id==='essay')return wc(st.essay)>=150;
+  if(id==='send')return !!st.sent[p];
+  if(id==='intro')return (st.ans.introq||'').trim().length>=15;
+  if(id==='docs'){var D=p==='p1'?DOCS1:DOCS2;return D.every(function(d){return d.qs.every(function(q){return (st.ans[q.id]||'').trim().length>=15})})}
+  if(id==='dos'){var ks=p==='p1'?['dosq1','dosq2','dosq3']:['dos2q1','dos2q2','dos2q3'];return ks.every(function(k){return (st.ans[k]||'').trim().length>=15})}
+  return false;
+}
+function ta(id,q,ph){return '<p class="q">'+q+'</p><textarea class="t" data-a="'+id+'" placeholder="'+(ph||'Ваш ответ')+'">'+esc(st.ans[id]||'')+'</textarea>'}
+function bindTA(root){$$('textarea[data-a]',root).forEach(function(t){t.addEventListener('input',function(){st.ans[t.getAttribute('data-a')]=t.value;save()})})}
+function head(n,t,l){return '<div class="h2"><span class="n">'+n+'</span><span>'+t+'</span></div>'+(l?'<p class="lead">'+l+'</p>':'')}
+
+/* ---------- pair 1 ---------- */
+function sIntro(e){
+  e.innerHTML=head('1','Две линии','Коминтерн и Наркоминдел: 1919–1935')+
+  '<div class="card"><p>После Гражданской войны у советского руководства было два инструмента внешней политики. Коммунистический интернационал (Коминтерн), созданный в Москве в марте 1919 г., объединял компартии разных стран и готовил революции за пределами России. Народный комиссариат иностранных дел (НКИД) во главе с Г. В. Чичериным (1918–1930), а затем М. М. Литвиновым (1930–1939) вёл переговоры с теми самыми правительствами, свергнуть которые призывал Коминтерн.</p>'+
+  '<p>Надежды на революцию в Европе в начале 1920-х гг. не оправдались. Советские республики в Венгрии и Баварии пали в 1919 г., в 1920 г. Красная армия была остановлена под Варшавой, в октябре 1923 г. подавлено восстание коммунистов в Гамбурге. В 1924–1925 гг. И. В. Сталин выдвинул тезис о возможности построить социализм в одной стране; в апреле 1925 г. его одобрила XIV конференция РКП(б). Лозунг мировой революции остался, но на первое место вышли безопасность СССР, торговля и кредиты.</p>'+
+  '<p>В 1922 г. Советская Россия прорвала изоляцию: в Рапалло договор с ней подписала Германия. В 1924 г. СССР признали Великобритания, Италия, Франция и другие страны, в 1933 г. США. Отношения оставались хрупкими: в 1927 г. Великобритания разорвала их после обвинений в подрывной деятельности.</p>'+
+  '<p>В 1930-е гг. главной угрозой стали Япония, захватившая в 1931 г. Маньчжурию, и Германия, где в январе 1933 г. к власти пришёл Гитлер. НКИД перешёл к политике коллективной безопасности: договоры о ненападении и взаимопомощи, вступление в Лигу Наций в 1934 г., предложения о совместном отпоре агрессору. Коминтерн на VII конгрессе в 1935 г. призвал коммунистов создавать народные фронты вместе с социалистами и либералами против фашизма.</p></div>'+
+  '<div class="card red"><h3>Вопрос для разминки</h3><p>Ответьте до начала сортировки и вернитесь к ответу в конце пары, если захотите его изменить.</p></div>'+
+  ta('introq','Чем могли мешать друг другу Коминтерн и НКИД? Приведите пример, когда деятельность одного осложняла работу другого.');
+  bindTA(e);
+}
+function sSort(e){
+  var h=head('2','Сортировка','Революция или дипломатия?')+
+  '<div class="card"><p>Отнесите каждое событие к одной из двух линий. Когда разложите все 12 карточек, нажмите «Проверить». После проверки ответы изменить нельзя.</p></div>'+
+  '<div class="cols"><div class="colhead a">Курс на мировую революцию (Коминтерн)</div><div class="colhead b">Государственная дипломатия (НКИД)</div></div>';
+  if(st.sortChecked){var sc=sortScore();h+='<div class="scorebox">Верно: '+sc+' из '+SORT.length+'</div>'}
+  h+='<div class="sortlist'+(st.sortChecked?' checked':'')+'">';
+  SORT.forEach(function(c){var v=st.sort[c.id];var cls=st.sortChecked?(v===c.k?' right':' wrong'):'';
+    h+='<div class="scard'+cls+'" data-c="'+c.id+'"><div class="yr">'+c.y+'</div><div class="tx">'+c.t+'</div><div class="ch">'+
+    '<button type="button" class="a'+(v==='a'?' sel':'')+'" data-v="a">Революция</button><button type="button" class="b'+(v==='b'?' sel':'')+'" data-v="b">Дипломатия</button></div>'+
+    '<div class="ex">'+(st.sortChecked&&v!==c.k?'<b>Правильно: '+(c.k==='a'?'революция':'дипломатия')+'.</b> ':'')+c.e+'</div></div>'});
+  h+='</div>';
+  if(!st.sortChecked)h+='<div style="margin:20px 0"><button class="btn red" id="chk" type="button">Проверить</button></div>';
+  e.innerHTML=h;
+  $$('.scard').forEach(function(card){$$('button',card).forEach(function(b){b.onclick=function(){if(st.sortChecked)return;st.sort[card.getAttribute('data-c')]=b.getAttribute('data-v');save();
+    $$('button',card).forEach(function(x){x.classList.toggle('sel',x===b)})}})});
+  var c=$('#chk');if(c)c.onclick=function(){var n=SORT.filter(function(x){return st.sort[x.id]}).length;
+    if(n<SORT.length){toast('Разложены не все карточки: '+n+' из '+SORT.length);return}
+    st.sortChecked=true;save();render();};
+}
+function sortScore(){return SORT.filter(function(x){return st.sort[x.id]===x.k}).length}
+function sDocs(e,D,t,l){
+  var num=st.pair==='p1'?'3':'2';
+  var h=head(num,t,l);
+  D.forEach(function(d,i){
+    h+='<article class="doc"><div class="stamp">'+d.stamp+'</div><div class="dh">'+(st.pair==='p1'?'Д'+(i+1):'Д'+(i+4))+'. '+d.title+'</div><p class="meta">'+d.meta+'</p>'+
+    '<div class="ctx">'+d.ctx+'</div>'+d.text.map(function(p){return'<p>'+p+'</p>'}).join('')+'</article>'+
+    '<div class="docq">'+d.qs.map(function(q){return ta(q.id,q.q)}).join('')+'</div>'});
+  e.innerHTML=h;bindTA(e);
+}
+function dosHTML(D,two){return '<div class="dgrid'+(two?' two':'')+'">'+D.map(function(d){return'<section class="dos"><div class="dt">'+d.t+'<small>'+d.y+'</small></div><dl>'+d.rows.map(function(r){return'<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>'}).join('')+'</dl></section>'}).join('')+'</div>'}
+function sDos1(e){
+  e.innerHTML=head('4','Досье','Советские добровольцы и первый бой с Японией')+
+  '<div class="card"><p>Три карточки о том, как СССР действовал за пределами своих границ в 1936–1938 гг. Прочитайте их и ответьте на вопросы под карточками.</p></div>'+dosHTML(DOS1)+
+  '<div class="docq">'+ta('dosq1','Сравните формы участия СССР в Испании, в Китае и у озера Хасан. Где СССР действовал открыто, а где скрывал своё участие? Почему?')+
+  ta('dosq2','Почему СССР помогал Чан Кайши, а не только китайским коммунистам? Какая из двух линий (революция или дипломатия) здесь победила?')+
+  ta('dosq3','Какие уроки для армии и политики можно было извлечь из Испании и Хасана? Учтите судьбу командиров.')+'</div>';
+  bindTA(e);
+}
+function sTest(e,T,key,dk){
+  var locked=st[dk];
+  var h=head(st.pair==='p1'?'5':'5','Тест',T.length+' вопросов, один верный ответ')+'<div class="card"><p>Ответьте на все вопросы и нажмите «Проверить тест». После проверки ответы изменить нельзя.</p></div>';
+  if(locked){h+='<div class="scorebox">Верно: '+testScore(T,st[key])+' из '+T.length+'</div>'}
+  T.forEach(function(q,i){var a=st[key][i];
+    h+='<div class="qz'+(locked?' locked':'')+'"><p class="qt">'+(i+1)+'. '+q.q+'</p>'+q.o.map(function(o,j){var cls='';if(locked){if(j===q.k)cls=' good';else if(a===j)cls=' bad'}
+      return'<label class="opt'+cls+'"><input type="radio" name="'+key+i+'" value="'+j+'"'+(a===j?' checked':'')+(locked?' disabled':'')+'><span>'+o+'</span></label>'}).join('')+'</div>'});
+  if(!locked)h+='<div style="margin:20px 0"><button class="btn red" id="tchk" type="button">Проверить тест</button></div>';
+  else h+='<div style="margin:20px 0"><button class="btn" id="tosend" type="button">Перейти к сдаче →</button></div>';
+  e.innerHTML=h;
+  $$('input[type=radio]',e).forEach(function(r){r.onchange=function(){var i=+r.name.replace(key,'');st[key][i]=+r.value;save()}});
+  var c=$('#tchk');if(c)c.onclick=function(){var n=Object.keys(st[key]).length;if(n<T.length){toast('Отвечено '+n+' из '+T.length);return}st[dk]=true;save();render();window.scrollTo(0,0)};
+  var g=$('#tosend');if(g)g.onclick=function(){st.step=PAIRS[st.pair].steps.length-1;save();render();scrollTo(0,0)};
+}
+function testScore(T,a){return T.filter(function(q,i){return a[i]===q.k}).length}
+
+/* ---------- pair 2 ---------- */
+function sSim(e){
+  var i=0;while(i<SIM.length&&st.sim[i]!=null)i++;
+  var view=st.simView!=null?st.simView:Math.min(i,SIM.length-1);
+  if(view>i)view=i;
+  var x=SIM[view],chosen=st.sim[view];
+  var matches=Object.keys(st.sim).filter(function(k){return st.sim[k]===SIM[k].r}).length;
+  var h=head('1','Выбор наркома','Девять развилок 1938–1941 гг.')+
+  '<div class="card"><p>Вы руководите внешней политикой СССР. На каждом шаге выберите решение и коротко объясните его. После выбора откроется, как поступило советское руководство и что из этого вышло. Здесь нет оценки «правильно» или «неправильно»: сравнивайте свои решения с реальными.</p></div>'+
+  '<div class="sim"><div class="sh"><span>Развилка '+(view+1)+' из '+SIM.length+'</span><span>Совпадений: '+matches+'</span></div>'+
+  '<div class="prog"><i style="width:'+(Object.keys(st.sim).length/SIM.length*100)+'%"></i></div><div class="sb">'+
+  '<div class="date">'+x.d+'</div><p class="sit">'+x.s+'</p>';
+  if(chosen==null){
+    h+='<label class="f" for="why" style="color:var(--paper)">Сначала коротко объясните, чем будете руководствоваться</label><textarea class="t" id="why" placeholder="Например: главная угроза сейчас…">'+esc(st.simWhy[view]||'')+'</textarea>'+
+       '<div class="ops" style="margin-top:12px">'+x.o.map(function(o,j){return'<button type="button" data-o="'+j+'"><b>'+'АБВ'[j]+'</b><span>'+o+'</span></button>'}).join('')+'</div>';
+  }else{
+    h+='<div class="ops">'+x.o.map(function(o,j){return'<button type="button" disabled class="'+(j===chosen?'sel ':'')+(j===x.r?'real':'')+'"><b>'+'АБВ'[j]+'</b><span>'+o+(j===x.r?' <i>(реальное решение)</i>':'')+'</span></button>'}).join('')+'</div>'+
+       '<div class="fact"><h4>'+(chosen===x.r?'Вы совпали с реальным решением':'В действительности выбрали вариант '+'АБВ'[x.r])+'</h4><p>'+x.f+'</p></div>'+
+       (st.simWhy[view]?'<p class="muted" style="color:#cfc5b0">Ваше объяснение: '+esc(st.simWhy[view])+'</p>':'');
+  }
+  h+='<div class="row" style="margin-top:14px;justify-content:space-between">'+
+     (view>0?'<button class="btn alt" id="sprev" type="button">← Развилка '+view+'</button>':'<span></span>')+
+     (chosen!=null&&view<SIM.length-1?'<button class="btn red" id="snext" type="button">Развилка '+(view+2)+' →</button>':'')+'</div></div></div>';
+  if(Object.keys(st.sim).length===SIM.length){
+    h+='<div class="card red"><h3>Итог: '+matches+' совпадений из '+SIM.length+'</h3><p>Ответьте на вопрос ниже, затем переходите к документам.</p></div>'+
+    ta('simq','Где ваши решения разошлись с реальными? Какие сведения были у руководства СССР, которых не было у вас, и наоборот?');
+  }
+  e.innerHTML=h;bindTA(e);
+  var w=$('#why');if(w)w.oninput=function(){st.simWhy[view]=w.value;save()};
+  $$('[data-o]',e).forEach(function(b){b.onclick=function(){var why=(st.simWhy[view]||'').trim();if(why.length<15){toast('Сначала объясните решение (хотя бы одно предложение)');if(w)w.focus();return}
+    st.sim[view]=+b.getAttribute('data-o');st.simView=view;save();render();var s=$('.sim');if(s)s.scrollIntoView({block:'start'})}});
+  var sp=$('#sprev'),sn=$('#snext');
+  if(sp)sp.onclick=function(){st.simView=view-1;save();render();$('.sim').scrollIntoView({block:'start'})};
+  if(sn)sn.onclick=function(){st.simView=view+1;save();render();$('.sim').scrollIntoView({block:'start'})};
+}
+function sDos2(e){
+  e.innerHTML=head('3','Досье','Две войны и новые границы')+dosHTML(DOS2,true)+
+  '<div class="h2" style="font-size:28px"><span>Новые территории 1939–1940</span></div><ul class="tl">'+TL.map(function(t){return'<li><span class="d">'+t[0]+'</span>'+t[1]+'</li>'}).join('')+'</ul>'+
+  '<div class="docq">'+ta('dos2q1','Сравните Халхин-Гол и Зимнюю войну: цели СССР, противник, потери, международные последствия.')+
+  ta('dos2q2','Какие выводы о Красной армии могли сделать в Берлине и в Токио по итогам 1939–1940 гг.?')+
+  ta('dos2q3','Какие из изменений границ 1939–1940 гг. прямо следуют из секретного протокола 23 августа 1939 г.?')+'</div>';
+  bindTA(e);
+}
+function wc(s){return (String(s||'').trim().match(/[A-Za-zА-Яа-яЁё0-9-]+/g)||[]).length}
+function sEssay(e){
+  e.innerHTML=head('4','Эссе','Был ли у СССР выбор в августе 1939 года?')+
+  '<div class="card"><p>Историки до сих пор спорят, чем был договор 23 августа 1939 г. Ниже две основные позиции. Прочитайте их и напишите эссе от 150 до 300 слов.</p></div>'+
+  '<div class="pos"><div class="card"><span class="tag r">Позиция 1</span><h3>Вынужденный шаг</h3><p>После Мюнхена СССР не доверял Англии и Франции. Военные миссии приехали в Москву без полномочий, Польша не пропускала Красную армию. На Халхин-Голе в это время шли бои с Японией, и в Москве опасались войны на два фронта. Договор отодвинул войну почти на два года и сдвинул границу на запад. Так оценивала события советская историография (брошюра «Фальсификаторы истории», 1948); близкие выводы делает британский историк Дж. Робертс.</p></div>'+
+  '<div class="card"><span class="tag">Позиция 2</span><h3>Расчёт и раздел сфер</h3><p>Секретный протокол показывает, что Москва договорилась о территориях: восточная Польша, Прибалтика, Бессарабия отходили к советской сфере интересов. Сталин рассчитывал, что Германия, Англия и Франция истощат друг друга в долгой войне. Ставка не сработала: Франция пала за шесть недель, Германия получила по торговым соглашениям советское сырьё. Такую позицию развивают, например, российские историки С. З. Случ и М. И. Мельтюхов.</p></div></div>'+
+  '<div class="card"><h3>Что должно быть в эссе</h3><ol><li>Ваш ответ на вопрос в первом предложении.</li><li>Не меньше трёх фактов из документов и досье этой пары (даты, статьи договоров, события).</li><li>Разбор хотя бы одного довода противоположной позиции.</li><li>Вывод: что выиграл и что потерял СССР к 22 июня 1941 г.</li></ol></div>'+
+  '<textarea class="t" id="essay" style="min-height:280px" placeholder="Ваше эссе">'+esc(st.essay)+'</textarea><div class="cnt" id="ec"></div>';
+  var t=$('#essay'),c=$('#ec');function upd(){var n=wc(t.value);c.textContent='Слов: '+n+(n<150?' · нужно не меньше 150':n>300?' · больше 300, сократите':' · объём подходит');c.style.color=n<150||n>300?'var(--red)':'var(--ok)'}
+  t.oninput=function(){st.essay=t.value;save();upd()};upd();
+}
+
+/* ---------- send ---------- */
+function missingList(p){
+  var m=[];
+  if(p==='p1'){if(!stepDone('p1','intro'))m.push('Вопрос на этапе «Две линии»');if(!st.sortChecked)m.push('Сортировка не проверена');
+    DOCS1.forEach(function(d,i){d.qs.forEach(function(q,j){if((st.ans[q.id]||'').trim().length<15)m.push('Д'+(i+1)+', вопрос '+(j+1))})});
+    ['dosq1','dosq2','dosq3'].forEach(function(k,i){if((st.ans[k]||'').trim().length<15)m.push('Досье, вопрос '+(i+1))});
+    if(!st.t1done)m.push('Тест не проверен');}
+  else{var n=Object.keys(st.sim).length;if(n<SIM.length)m.push('Выбор наркома: пройдено '+n+' из '+SIM.length);
+    DOCS2.forEach(function(d,i){d.qs.forEach(function(q,j){if((st.ans[q.id]||'').trim().length<15)m.push('Д'+(i+4)+', вопрос '+(j+1))})});
+    ['dos2q1','dos2q2','dos2q3'].forEach(function(k,i){if((st.ans[k]||'').trim().length<15)m.push('Досье, вопрос '+(i+1))});
+    if(wc(st.essay)<150)m.push('Эссе: '+wc(st.essay)+' слов из 150');if(!st.t2done)m.push('Тест не проверен');}
+  return m;
+}
+function sSend(e){
+  var p=st.pair,m=missingList(p);
+  var h=head('6','Сдать работу',PAIRS[p].title);
+  if(st.sent[p])h+='<div class="card red"><h3>Работа отправлена</h3><p>Отправлено: '+esc(st.sent[p])+'. Если вы что-то исправили, можно отправить ещё раз: преподаватель увидит последнюю версию.</p></div>';
+  h+='<div class="card"><p><b>'+esc(st.name)+'</b>, группа '+esc(st.group)+'</p>'+
+   (p==='p1'?'<p>Сортировка: '+(st.sortChecked?sortScore()+' из '+SORT.length:'не проверена')+'<br>Тест: '+(st.t1done?testScore(TEST1,st.t1)+' из '+TEST1.length:'не проверен')+'</p>'
+            :'<p>Совпадений с реальными решениями: '+Object.keys(st.sim).filter(function(k){return st.sim[k]===SIM[k].r}).length+' из '+SIM.length+'<br>Эссе: '+wc(st.essay)+' слов<br>Тест: '+(st.t2done?testScore(TEST2,st.t2)+' из '+TEST2.length:'не проверен')+'</p>')+
+   (m.length?'<div class="missing"><b>Не выполнено:</b><ul>'+m.map(function(x){return'<li>'+x+'</li>'}).join('')+'</ul></div><p class="muted">Отправить можно и сейчас, но незаполненные ответы уйдут пустыми.</p>':'<p class="status ok">Все задания выполнены</p>')+
+   '<button class="btn red" id="snd" type="button">'+(st.sent[p]?'Отправить ещё раз':'Сдать работу')+'</button></div>';
+  e.innerHTML=h;
+  $('#snd').onclick=function(){var b=this;if(m.length&&!confirm('Есть невыполненные задания ('+m.length+'). Всё равно отправить?'))return;b.disabled=true;b.textContent='Отправка…';
+    send(p,function(ok,msg){if(ok){st.sent[p]=fmt(Date.now());save();toast('Работа отправлена');render()}else{b.disabled=false;b.textContent='Повторить отправку';toast('Не отправлено: '+(msg||'ошибка')+'. Проверьте интернет')}})};
+}
+function answersText(p){
+  var L=[];function A(k){return (st.ans[k]||'').trim()||'—'}
+  if(p==='p1'){L.push('[Разминка] '+A('introq'));
+    L.push('[Сортировка] '+SORT.map(function(c,i){return (i+1)+':'+(st.sort[c.id]===c.k?'+':'−')}).join(' '));
+    DOCS1.forEach(function(d,i){d.qs.forEach(function(q,j){L.push('[Д'+(i+1)+'.'+(j+1)+'] '+A(q.id))})});
+    ['dosq1','dosq2','dosq3'].forEach(function(k,i){L.push('[Досье '+(i+1)+'] '+A(k))});
+    L.push('[Тест] '+TEST1.map(function(q,i){return (i+1)+':'+(st.t1[i]===q.k?'+':'−')}).join(' '));}
+  else{SIM.forEach(function(x,i){var c=st.sim[i];L.push('[Нарком '+(i+1)+' · '+x.d+'] выбор '+(c==null?'—':'АБВ'[c]+(c===x.r?' (совпал)':' (реально '+'АБВ'[x.r]+')'))+'; объяснение: '+((st.simWhy[i]||'').trim()||'—'))});
+    L.push('[Нарком итог] '+A('simq'));
+    DOCS2.forEach(function(d,i){d.qs.forEach(function(q,j){L.push('[Д'+(i+4)+'.'+(j+1)+'] '+A(q.id))})});
+    ['dos2q1','dos2q2','dos2q3'].forEach(function(k,i){L.push('[Досье '+(i+1)+'] '+A(k))});
+    L.push('[Эссе, '+wc(st.essay)+' сл.] '+(st.essay.trim()||'—'));
+    L.push('[Тест] '+TEST2.map(function(q,i){return (i+1)+':'+(st.t2[i]===q.k?'+':'−')}).join(' '));}
+  return L.join('\n');
+}
+function payload(p){
+  var score,max,scores;
+  if(p==='p1'){var a=sortScore(),b=st.t1done?testScore(TEST1,st.t1):0;score=a+b;max=SORT.length+TEST1.length;scores='сортировка '+a+'/'+SORT.length+'; тест '+b+'/'+TEST1.length}
+  else{var m=Object.keys(st.sim).filter(function(k){return st.sim[k]===SIM[k].r}).length,t=st.t2done?testScore(TEST2,st.t2):0;score=t;max=TEST2.length;scores='тест '+t+'/'+TEST2.length+'; совпадений с реальными решениями '+m+'/'+SIM.length+'; эссе '+wc(st.essay)+' слов'}
+  var now=Date.now(),started=st.started[p]||now;
+  return JSON.stringify({sheet:PAIRS[p].sheet,id:st.id+'-'+p,name:st.name,group:st.group,status:missingList(p).length?'неполная':'завершён',
+    started:fmt(started),ended:fmt(now),score:score,max:max,percent:Math.round(score/max*100),duration:Math.round((now-started)/1000),
+    leaves:0,awaySec:0,leaveLog:'',blocked:0,blockLog:'',timeouts:0,timeoutQ:'',reloads:0,
+    ua:navigator.userAgent,screen:(screen.width||0)+'x'+(screen.height||0),scores:scores,answers:answersText(p)});
+}
+function send(p,cb){
+  var body=payload(p);
+  var ctl=('AbortController' in window)?new AbortController():null;var tm=setTimeout(function(){if(ctl)ctl.abort()},15000);
+  fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body,redirect:'follow',signal:ctl?ctl.signal:undefined})
+  .then(function(r){return r.json()}).then(function(j){clearTimeout(tm);if(j&&j.ok)cb(true);else cb(false,'таблица ответила ошибкой')})
+  .catch(function(){clearTimeout(tm);fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body}).then(function(){cb(true)}).catch(function(){cb(false,'нет связи')})});
+}
+
+/* ---------- nav ---------- */
+$('#goHome').onclick=function(){st.view='home';save();render();scrollTo(0,0)};
+$('#goP1').onclick=function(){openPair('p1',st.pair==='p1'?st.step:0)};
+$('#goP2').onclick=function(){openPair('p2',st.pair==='p2'?st.step:0)};
+if(st.view!=='login'&&!st.name)st.view='login';
+render();
+})();
+</script>
+</body>
+</html>
