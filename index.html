@@ -543,6 +543,7 @@ function render(){
   $('#goHome').classList.toggle('on',st.view==='home');
   $('#goP1').classList.toggle('on',st.view==='pair'&&st.pair==='p1');
   $('#goP2').classList.toggle('on',st.view==='pair'&&st.pair==='p2');
+  if(st.view==='lock'){renderLock();return}
   if(st.view==='home')renderHome();else renderPair();
 }
 function renderLogin(){
@@ -565,12 +566,24 @@ function renderHome(){
     h+='<div class="pair"><div class="top"><div class="num">0'+(i+1)+'</div><div class="nm">'+P.title+'</div></div><div class="body">'+
     '<div class="status'+(st.sent[p]?' ok':'')+'">'+(st.sent[p]?'Сдано · '+esc(st.sent[p]):'Этапов выполнено: '+pr.done+' из '+pr.all)+'</div>'+
     '<div class="muted">'+P.span+'</div><ol>'+P.steps.map(function(s){return'<li>'+s.n+'</li>'}).join('')+'</ol>'+
-    '<button class="btn'+(i?' red':'')+'" data-p="'+p+'" type="button">Открыть пару '+(i+1)+'</button></div></div>'});
+    '<button class="btn'+(i?' red':'')+'" data-p="'+p+'" type="button">'+(p==='p2'&&!st.p2open?'🔒 ':'')+'Открыть пару '+(i+1)+'</button></div></div>'});
   h+='</div><div class="card"><h3>Как работать</h3><p>Пройдите этапы по порядку: кнопки этапов находятся вверху пары, их можно листать пальцем. Письменные ответы пишите своими словами, 2–4 предложения на вопрос. Тест в конце пары проверяется сразу. После теста откройте этап «Сдать» и отправьте работу.</p></div>';
   app.innerHTML=h;
   $$('[data-p]').forEach(function(b){b.onclick=function(){openPair(b.getAttribute('data-p'),0)}});
 }
-function openPair(p,step){st.view='pair';st.pair=p;st.step=step||0;if(!st.started[p])st.started[p]=Date.now();save();render();scrollTo(0,0)}
+function phash(s){var x=2166136261;for(var i=0;i<s.length;i++){x^=s.charCodeAt(i);x=Math.imul(x,16777619)>>>0}return x.toString(16)}
+function renderLock(){
+  app.innerHTML=head('!','Пара 2 закрыта','Преподаватель откроет её на занятии')+
+  '<div class="card ink"><h3>Введите пароль</h3><p>Пароль сообщит преподаватель. Ответы первой пары при этом сохраняются.</p>'+
+  '<label class="f" for="pw" style="color:var(--paper)">Пароль</label><input class="t" id="pw" type="password" autocomplete="off" autocapitalize="off" spellcheck="false">'+
+  '<div class="row" style="margin-top:18px"><button class="btn red" id="pwgo" type="button">Открыть</button><button class="btn alt" id="pwback" type="button">← К парам</button></div></div>';
+  var go=function(){var v=$('#pw').value.trim().toLowerCase().replace(/ё/g,'е');
+    if(phash(v)===PW){st.p2open=true;save();openPair('p2',st.pendingStep||0)}else{toast('Неверный пароль');$('#pw').value='';$('#pw').focus()}};
+  $('#pwgo').onclick=go;$('#pw').onkeydown=function(e){if(e.key==='Enter')go()};
+  $('#pwback').onclick=function(){st.view='home';save();render();scrollTo(0,0)};
+}
+var PW='95f101a7';
+function openPair(p,step){if(p==='p2'&&!st.p2open){st.view='lock';st.pendingStep=step||0;save();render();scrollTo(0,0);return}st.view='pair';st.pair=p;st.step=step||0;if(!st.started[p])st.started[p]=Date.now();save();render();scrollTo(0,0)}
 function renderPair(){
   var P=PAIRS[st.pair],s=P.steps[st.step];
   var h='<nav class="steps" aria-label="Этапы">'+P.steps.map(function(x,i){return'<button type="button" data-s="'+i+'" class="'+(i===st.step?'cur':'')+(stepDone(st.pair,x.id)?' done':'')+'"><b>'+(i+1)+'</b>'+x.n+'</button>'}).join('')+'</nav>';
@@ -995,6 +1008,15 @@ function reveal(now){
   var vh=window.innerHeight||800;
   els.forEach(function(el,i){if(el.classList.contains('rv'))return;if(!now&&el.getBoundingClientRect().top<vh){el.classList.add('rv');requestAnimationFrame(function(){requestAnimationFrame(function(){el.classList.add('in')})});return}if(now){el.classList.add('rv','in');return}el.classList.add('rv');if(i%2)el.classList.add('r2');io.observe(el)});
 }
+
+/* ---------- paste guard ---------- */
+var MAXPASTE=5;
+function pasteBlocked(){toast('Вставлять можно не больше '+MAXPASTE+' символов. Пишите ответ сами')}
+document.addEventListener('paste',function(e){var t=e.target;if(!t||!/^(INPUT|TEXTAREA)$/.test(t.tagName))return;
+  var d=(e.clipboardData||window.clipboardData);var tx=d?d.getData('text'):'';if(tx.length>MAXPASTE){e.preventDefault();pasteBlocked()}},true);
+document.addEventListener('drop',function(e){var t=e.target;if(t&&/^(INPUT|TEXTAREA)$/.test(t.tagName)){e.preventDefault();pasteBlocked()}},true);
+document.addEventListener('beforeinput',function(e){if(e.inputType!=='insertFromPaste'&&e.inputType!=='insertFromDrop'&&e.inputType!=='insertFromPasteAsQuotation')return;
+  var tx=e.data||(e.dataTransfer&&e.dataTransfer.getData('text'))||'';if(e.inputType==='insertFromDrop'||tx.length>MAXPASTE||(!tx&&e.inputType!=='insertFromPaste')){e.preventDefault();pasteBlocked()}},true);
 
 /* ---------- nav ---------- */
 $('#goHome').onclick=function(){st.view='home';save();render();scrollTo(0,0)};
