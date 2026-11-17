@@ -8,11 +8,12 @@
 <title>Тема 2.5. Внешняя политика СССР в 1920–1930-е годы</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Oswald:wght@400;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap" rel="stylesheet">
 <style>
 :root{
-  --red:#d2231c; --red-d:#9e1610; --ink:#141414; --paper:#efe5cf; --paper2:#e6d8b8;
-  --ochre:#d89a1e; --grey:#5b564c; --ok:#2f6b2a;
+  --red:#e0251b; --red-d:#a3140d; --ink:#121212; --paper:#f1e6cc; --paper2:#e5d5b0;
+  --ochre:#f0a81c; --grey:#5b564c; --ok:#2c7a2c;
+  --disp:'Unbounded','Oswald',Impact,sans-serif;
   --head:'Oswald','Arial Narrow',Impact,sans-serif;
   --body:'PT Serif',Georgia,'Times New Roman',serif;
   --mono:'PT Mono','Courier New',monospace;
@@ -20,188 +21,295 @@
   --safe-b:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
-  background-image:radial-gradient(rgba(20,20,20,.05) 1px,transparent 1.4px),radial-gradient(rgba(160,120,60,.06) 1px,transparent 1.6px);
-  background-size:7px 7px,13px 13px;background-position:0 0,3px 5px;overflow-x:hidden}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
+main,footer{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden;
+  background-image:radial-gradient(rgba(18,18,18,.06) 1px,transparent 1.5px);background-size:6px 6px}
 button,input,textarea,select{font:inherit;color:inherit}
-input,textarea{font-size:16px}
+input,textarea,select{font-size:16px}
 a{color:var(--red-d)}
-.wrap{max-width:980px;margin:0 auto;padding:0 calc(18px + var(--safe-r)) 0 calc(18px + var(--safe-l))}
+.wrap{max-width:1000px;margin:0 auto;padding:0 calc(18px + var(--safe-r)) 0 calc(18px + var(--safe-l));position:relative}
 
-/* ---------- poster header ---------- */
-.poster{position:relative;background:var(--ink);color:var(--paper);overflow:hidden;min-height:330px;isolation:isolate}
-.poster .wedge{position:absolute;inset:0;background:var(--red);clip-path:polygon(0 0,74% 0,40% 100%,0 100%);z-index:-1}
-.poster .rays{position:absolute;right:-120px;top:-120px;width:520px;height:520px;z-index:-1;opacity:.95}
-.poster .band{position:absolute;left:-10%;bottom:46px;width:130%;height:22px;background:var(--ochre);transform:rotate(-6deg);z-index:-1}
-.poster .inner{position:relative;padding:34px calc(20px + var(--safe-r)) 92px calc(20px + var(--safe-l));max-width:980px;margin:0 auto}
-.poster .kicker{font-family:var(--head);letter-spacing:.18em;text-transform:uppercase;font-size:14px;background:var(--ink);display:inline-block;padding:4px 10px}
-.poster h1{font-family:var(--head);font-weight:700;text-transform:uppercase;line-height:.95;margin:16px 0 10px;font-size:clamp(38px,9vw,86px);letter-spacing:-.01em;max-width:11ch}
-.poster h1 span{display:block;color:var(--ink);background:var(--paper);width:max-content;max-width:100%;padding:0 .12em;margin-top:.08em;transform:rotate(-2deg);transform-origin:left}
-.poster .sub{font-family:var(--head);font-size:clamp(16px,3.6vw,22px);text-transform:uppercase;letter-spacing:.04em;max-width:30ch}
-.poster .years{position:absolute;right:calc(18px + var(--safe-r));bottom:76px;font-family:var(--head);font-weight:700;font-size:clamp(30px,8vw,70px);color:var(--paper);background:var(--ink);padding:0 .15em;line-height:1.1}
-@media (max-width:560px){.poster .years{position:static;margin-top:14px;display:block}.poster .inner{padding-bottom:76px}.poster .wedge{clip-path:polygon(0 0,100% 0,30% 100%,0 100%)}.poster .rays{width:300px;height:300px;right:-120px;top:auto;bottom:-40px}}
-.poster.compact{min-height:0}.poster.compact .inner{padding-top:16px;padding-bottom:40px}.poster.compact h1{font-size:clamp(26px,6vw,44px);margin:10px 0 0}.poster.compact .kicker,.poster.compact .sub,.poster.compact .years,.poster.compact .rays{display:none}.poster.compact .band{bottom:14px;height:12px}
-.sim,.steps{scroll-margin-top:70px}
+/* background geometry */
+.bgdeco{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bgdeco i{position:absolute;display:block}
+.bgdeco .c1{width:60vmax;height:60vmax;border-radius:50%;border:7vmax solid rgba(224,37,27,.07);right:-25vmax;top:30vh}
+.bgdeco .w1{width:140vmax;height:16vmax;background:rgba(18,18,18,.045);left:-30vmax;bottom:10vh;transform:rotate(-18deg)}
+.bgdeco .w2{width:12vmax;height:120vmax;background:rgba(240,168,28,.09);left:6vw;top:-20vh;transform:rotate(24deg)}
 
-/* ---------- user bar & nav ---------- */
-.userbar{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper);font-family:var(--head);letter-spacing:.04em;font-size:14px;text-transform:uppercase;border-bottom:4px solid var(--red)}
-.userbar .wrap{display:flex;gap:10px;align-items:center;min-height:48px;flex-wrap:wrap;padding-top:4px;padding-bottom:4px}
-.userbar .who{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.userbar button{background:none;border:2px solid var(--paper);color:var(--paper);padding:6px 10px;min-height:38px;font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+/* ---------- ticker ---------- */
+.ticker{background:var(--ink);color:var(--ochre);overflow:hidden;white-space:nowrap;font-family:var(--head);font-weight:700;letter-spacing:.14em;font-size:14px;border-bottom:3px solid var(--red)}
+.ticker div{display:inline-block;padding:7px 0;animation:tick 38s linear infinite}
+.ticker span{margin:0 18px}
+.ticker b{color:var(--red)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- poster ---------- */
+.poster{position:relative;background:var(--paper);overflow:hidden;isolation:isolate;border-bottom:8px solid var(--ink)}
+.poster .stage{position:relative;min-height:min(92vh,760px);max-width:1100px;margin:0 auto;padding:28px calc(18px + var(--safe-r)) 40px calc(18px + var(--safe-l))}
+.poster .wedge{position:absolute;inset:0;background:var(--red);clip-path:polygon(0 0,62% 0,30% 100%,0 100%);z-index:-2;animation:wedgeIn .9s cubic-bezier(.2,.8,.2,1) both}
+.poster .blk{position:absolute;right:0;top:0;bottom:0;width:46%;background:var(--ink);clip-path:polygon(38% 0,100% 0,100% 100%,0 100%);z-index:-2;animation:blkIn 1s .1s cubic-bezier(.2,.8,.2,1) both}
+.poster .disc{position:absolute;right:6%;top:9%;width:min(34vw,330px);aspect-ratio:1;border-radius:50%;background:var(--paper);z-index:-1;animation:pop .8s .35s both}
+.poster .disc::after{content:"";position:absolute;inset:22%;border-radius:50%;background:var(--red)}
+.poster .bar{position:absolute;left:-5%;width:115%;height:30px;background:var(--ochre);bottom:17%;transform:rotate(-9deg);z-index:-1;animation:barIn .9s .25s both}
+.poster .bar2{position:absolute;left:-5%;width:115%;height:10px;background:var(--ink);bottom:calc(17% - 26px);transform:rotate(-9deg);z-index:-1}
+.big1920,.big1941{position:absolute;font-family:var(--disp);font-weight:900;line-height:.8;letter-spacing:-.04em;z-index:-1;user-select:none}
+.big1920{left:2%;bottom:4%;font-size:clamp(90px,24vw,280px);color:transparent;-webkit-text-stroke:3px rgba(241,230,204,.75)}
+.big1941{right:2%;bottom:2%;font-size:clamp(70px,17vw,200px);color:var(--red);transform:rotate(-9deg);transform-origin:right bottom}
+.poster .kicker{display:inline-block;font-family:var(--head);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:14px;background:var(--ink);color:var(--paper);padding:5px 12px;transform:rotate(-2deg)}
+.poster h1{margin:22px 0 0;font-family:var(--disp);font-weight:900;text-transform:uppercase;line-height:.92;font-size:clamp(34px,7.6vw,84px);letter-spacing:-.02em}
+.poster h1 span{display:block;width:max-content;max-width:100%;padding:.06em .18em .1em;margin:.05em 0;animation:slideR .7s cubic-bezier(.2,.8,.2,1) both}
+.poster h1 .l1{background:var(--ink);color:var(--paper);transform:rotate(-5deg);animation-delay:.25s}
+.poster h1 .l2{background:var(--paper);color:var(--red);transform:rotate(-5deg) translateX(.5em);animation-delay:.38s;border:4px solid var(--ink)}
+.poster h1 .l3{background:var(--ochre);color:var(--ink);transform:rotate(-5deg) translateX(1em);animation-delay:.5s}
+.poster .sub{margin-top:28px;max-width:30ch;font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(16px,3.6vw,22px);line-height:1.2;background:var(--paper);color:var(--ink);padding:8px 12px;border-left:10px solid var(--ink);display:inline-block}
+@keyframes wedgeIn{from{clip-path:polygon(0 0,0 0,0 100%,0 100%)}}
+@keyframes blkIn{from{transform:translateX(100%)}}
+@keyframes pop{from{transform:scale(0) rotate(-90deg)}}
+@keyframes barIn{from{transform:rotate(-9deg) translateX(-100%)}}
+@keyframes slideR{from{opacity:0;translate:-60px 0}}
+@media (max-width:640px){
+  .poster .stage{min-height:600px}
+  .poster .wedge{clip-path:polygon(0 0,100% 0,100% 18%,0 78%)}
+  .poster .blk{width:60%;top:auto;height:44%}
+  .poster .disc{width:150px;right:-30px;top:auto;bottom:24%}
+  .poster h1 .l2{transform:rotate(-5deg) translateX(.25em)}
+  .poster h1 .l3{transform:rotate(-5deg) translateX(.5em)}
+}
+.poster.compact .stage{min-height:0;padding-top:14px;padding-bottom:22px}
+.poster.compact .disc,.poster.compact .big1920,.poster.compact .big1941,.poster.compact .sub,.poster.compact .kicker,.poster.compact .bar2{display:none}
+.poster.compact .bar{height:12px;bottom:8px}
+.poster.compact h1{font-size:clamp(20px,4.6vw,36px);margin:0}
+.poster.compact h1 span{display:inline-block;animation:none;transform:rotate(-2deg)!important;margin:2px 6px 2px 0}
+.poster.compact .blk{width:30%}
+
+/* ---------- user bar & steps ---------- */
+.userbar{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper);font-family:var(--head);letter-spacing:.05em;font-size:14px;text-transform:uppercase;border-bottom:5px solid var(--red)}
+.userbar .wrap{display:flex;gap:8px;align-items:center;min-height:50px;flex-wrap:wrap;padding-top:4px;padding-bottom:4px}
+.userbar .who{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
+.userbar button{background:none;border:2px solid var(--paper);color:var(--paper);padding:6px 12px;min-height:40px;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;transform:skewX(-10deg)}
 .userbar button.on{background:var(--red);border-color:var(--red)}
-.steps{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:14px 2px 10px;scrollbar-width:thin;scroll-snap-type:x proximity}
-.steps button{flex:0 0 auto;scroll-snap-align:start;border:3px solid var(--ink);background:var(--paper);padding:8px 12px;min-height:46px;font-family:var(--head);text-transform:uppercase;font-size:14px;letter-spacing:.04em;cursor:pointer;display:flex;gap:8px;align-items:center}
-.steps button b{display:inline-grid;place-items:center;width:26px;height:26px;background:var(--ink);color:var(--paper);border-radius:50%;font-size:14px}
-.steps button.cur{background:var(--red);color:#fff;border-color:var(--red)}
-.steps button.cur b{background:#fff;color:var(--red)}
-.steps button.done b{background:var(--ok)}
+.steps{display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 6px;padding:4px 2px 12px;scrollbar-width:thin;scroll-snap-type:x proximity}
+.steps button{flex:0 0 auto;scroll-snap-align:start;border:none;background:var(--ink);color:var(--paper);padding:10px 22px 10px 26px;min-height:52px;margin-right:-8px;font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.05em;cursor:pointer;display:flex;gap:8px;align-items:center;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%)}
+.steps button:first-child{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
+.steps button b{font-family:var(--disp);font-size:15px;color:var(--ochre)}
+.steps button.cur{background:var(--red);color:#fff}
+.steps button.cur b{color:#fff}
+.steps button.done{background:#3f3a33}
+.steps button.done b::after{content:" ✓";color:#8fd18a}
 
-/* ---------- generic blocks ---------- */
+/* ---------- headings ---------- */
 main{padding-bottom:calc(60px + var(--safe-b))}
-.h2{font-family:var(--head);text-transform:uppercase;font-weight:700;font-size:clamp(28px,6vw,46px);line-height:1;margin:26px 0 8px;display:flex;align-items:flex-start;gap:12px}
-.h2 .n{flex:0 0 auto;background:var(--red);color:#fff;padding:4px 10px 2px;transform:rotate(-4deg);font-size:.8em}
-.lead{font-family:var(--head);font-size:18px;text-transform:uppercase;letter-spacing:.03em;color:var(--grey);margin:0 0 18px}
-.card{background:#f7f0de;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:18px 18px 16px;margin:0 0 26px;position:relative}
-.card.red{background:var(--red);color:#fff;box-shadow:7px 7px 0 var(--ink)}
-.card.red a{color:#fff}
-.card h3{font-family:var(--head);text-transform:uppercase;font-size:22px;line-height:1.1;margin:0 0 10px;letter-spacing:.02em}
-.card p{margin:0 0 .8em}
-.card p:last-child{margin-bottom:0}
-.tag{display:inline-block;font-family:var(--head);text-transform:uppercase;font-size:13px;letter-spacing:.08em;background:var(--ink);color:var(--paper);padding:2px 8px;margin:0 6px 8px 0}
+.h2{position:relative;margin:34px 0 12px;min-height:90px;display:flex;align-items:flex-end}
+.h2 .bign{position:absolute;left:-6px;top:-24px;font-family:var(--disp);font-weight:900;font-size:clamp(90px,22vw,170px);line-height:.8;color:transparent;-webkit-text-stroke:3px var(--red);opacity:.55;z-index:-1;letter-spacing:-.05em}
+.h2 .ttl{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:clamp(26px,6.4vw,50px);line-height:1;background:var(--ink);color:var(--paper);padding:.12em .3em .16em;transform:rotate(-3deg);transform-origin:left bottom;box-shadow:8px 8px 0 var(--red);margin-left:clamp(30px,8vw,70px)}
+.lead{font-family:var(--head);font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.04em;color:var(--red-d);margin:14px 0 20px;padding-left:14px;border-left:8px solid var(--ochre)}
+
+/* ---------- blocks ---------- */
+.card{background:#f9f1dc;border:4px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:20px 20px 18px;margin:0 0 30px;position:relative}
+.card::before{content:"";position:absolute;right:-4px;top:-4px;width:46px;height:46px;background:var(--red);clip-path:polygon(0 0,100% 0,100% 100%)}
+.card.red{background:var(--red);color:#fff;box-shadow:10px 10px 0 var(--ink)}
+.card.red::before{background:var(--ink)}
+.card.ink{background:var(--ink);color:var(--paper);box-shadow:10px 10px 0 var(--red)}
+.card.red a,.card.ink a{color:#fff}
+.card h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:20px;line-height:1.15;margin:0 0 12px;letter-spacing:.01em}
+.card p{margin:0 0 .8em}.card p:last-child{margin-bottom:0}
+.tag{display:inline-block;font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.08em;background:var(--ink);color:var(--paper);padding:3px 9px;margin:0 6px 10px 0;transform:skewX(-10deg)}
 .tag.r{background:var(--red);color:#fff}
 .muted{color:var(--grey);font-size:15px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:3px solid var(--ink);background:var(--ink);color:var(--paper);font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-size:17px;padding:10px 18px;min-height:50px;cursor:pointer;box-shadow:4px 4px 0 var(--red);transition:transform .08s}
-.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--red)}
-.btn.alt{background:var(--paper);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
-.btn.red{background:var(--red);border-color:var(--red);color:#fff;box-shadow:4px 4px 0 var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:4px solid var(--ink);background:var(--ink);color:var(--paper);font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:18px;padding:10px 22px;min-height:54px;cursor:pointer;box-shadow:6px 6px 0 var(--red);transition:transform .08s,box-shadow .08s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--red)}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--red)}
+.btn.alt{background:var(--paper);color:var(--ink);box-shadow:6px 6px 0 var(--ink)}
+.btn.red{background:var(--red);border-color:var(--ink);color:#fff;box-shadow:6px 6px 0 var(--ink)}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.nextbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 30px}
-label.f{display:block;font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;font-size:15px;margin:12px 0 6px}
-input.t,textarea.t{width:100%;border:3px solid var(--ink);background:#fffaf0;padding:10px 12px;border-radius:0;-webkit-appearance:none;appearance:none}
+.nextbar{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:16px 0 36px}
+label.f{display:block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:15px;margin:14px 0 6px}
+input.t,textarea.t,select.t{width:100%;border:4px solid var(--ink);background:#fffaf0;padding:10px 12px;border-radius:0;-webkit-appearance:none;appearance:none}
+select.t{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 13px) 50%;background-size:7px 7px;background-repeat:no-repeat;padding-right:36px}
 textarea.t{min-height:110px;resize:vertical;line-height:1.5}
-input.t:focus,textarea.t:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(210,35,28,.25)}
+input.t:focus,textarea.t:focus,select.t:focus{outline:none;border-color:var(--red);box-shadow:6px 6px 0 var(--ochre)}
 .cnt{font-family:var(--mono);font-size:13px;color:var(--grey);text-align:right;margin-top:4px}
-.q{margin:16px 0 4px;font-weight:700}
+.q{margin:16px 0 6px;font-weight:700}
+.scorebox{font-family:var(--disp);font-weight:900;font-size:24px;text-transform:uppercase;border:4px solid var(--ink);background:var(--ochre);display:inline-block;padding:8px 16px;margin:8px 0 18px;box-shadow:6px 6px 0 var(--ink);transform:rotate(-2deg)}
 
-/* ---------- home pair cards ---------- */
-.pairs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:26px 0}
+/* ---------- home ---------- */
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:30px 0}
 @media (max-width:720px){.pairs{grid-template-columns:1fr}}
-.pair{border:3px solid var(--ink);background:#f7f0de;box-shadow:8px 8px 0 var(--ink);display:flex;flex-direction:column}
-.pair .top{background:var(--ink);color:var(--paper);padding:14px 16px;position:relative;overflow:hidden}
-.pair .top::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:var(--red);transform:rotate(30deg)}
-.pair .top .num{font-family:var(--head);font-size:56px;line-height:1;font-weight:700;position:relative;z-index:1}
-.pair .top .nm{font-family:var(--head);text-transform:uppercase;font-size:21px;line-height:1.1;position:relative;z-index:1;max-width:80%}
-.pair .body{padding:14px 16px 18px;flex:1;display:flex;flex-direction:column}
-.pair ol{margin:6px 0 16px;padding-left:22px}
+.pair{border:4px solid var(--ink);background:#f9f1dc;box-shadow:12px 12px 0 var(--ink);display:flex;flex-direction:column}
+.pair:nth-child(2){box-shadow:12px 12px 0 var(--red)}
+.pair .top{background:var(--ink);color:var(--paper);padding:16px 18px;position:relative;overflow:hidden;min-height:150px}
+.pair:nth-child(2) .top{background:var(--red)}
+.pair .top::after{content:"";position:absolute;right:-40px;bottom:-60px;width:170px;height:170px;border-radius:50%;border:26px solid var(--ochre)}
+.pair .top .num{font-family:var(--disp);font-size:78px;line-height:.9;font-weight:900;position:relative;z-index:1;color:transparent;-webkit-text-stroke:2px var(--paper)}
+.pair .top .nm{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:19px;line-height:1.15;position:relative;z-index:1;max-width:78%;margin-top:6px}
+.pair .body{padding:16px 18px 20px;flex:1;display:flex;flex-direction:column}
+.pair ol{margin:6px 0 18px;padding-left:24px}
 .pair ol li{margin:3px 0}
 .pair .btn{margin-top:auto;align-self:flex-start}
-.status{font-family:var(--head);text-transform:uppercase;font-size:14px;letter-spacing:.05em;margin:0 0 10px}
+.status{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.05em;margin:0 0 8px}
 .status.ok{color:var(--ok)}
 
 /* ---------- sorting ---------- */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 18px}
-.colhead{font-family:var(--head);text-transform:uppercase;padding:10px 12px;font-size:17px;line-height:1.15;border:3px solid var(--ink)}
-.colhead.a{background:var(--red);color:#fff}
-.colhead.b{background:var(--ink);color:var(--paper)}
+.colhead{font-family:var(--disp);font-weight:900;text-transform:uppercase;padding:12px 14px;font-size:15px;line-height:1.2;border:4px solid var(--ink)}
+.colhead.a{background:var(--red);color:#fff;transform:rotate(-1.5deg)}
+.colhead.b{background:var(--ink);color:var(--paper);transform:rotate(1.5deg)}
 @media (max-width:640px){.cols{grid-template-columns:1fr}}
-.sortlist{display:grid;gap:12px}
-.scard{border:3px solid var(--ink);background:#fffaf0;padding:12px 14px;display:grid;gap:10px}
-.scard .yr{font-family:var(--head);font-size:15px;color:var(--red-d);letter-spacing:.05em}
+.sortlist{display:grid;gap:14px}
+.scard{border:4px solid var(--ink);background:#fffaf0;padding:12px 14px;display:grid;gap:10px}
+.scard .yr{font-family:var(--disp);font-weight:900;font-size:15px;color:var(--red)}
 .scard .tx{font-weight:700;line-height:1.35}
 .scard .ch{display:flex;gap:8px;flex-wrap:wrap}
-.scard .ch button{flex:1 1 140px;min-height:46px;border:3px solid var(--ink);background:var(--paper);font-family:var(--head);text-transform:uppercase;font-size:14px;letter-spacing:.03em;cursor:pointer;padding:6px 8px}
-.scard .ch button.sel.a{background:var(--red);border-color:var(--red);color:#fff}
+.scard .ch button{flex:1 1 140px;min-height:48px;border:3px solid var(--ink);background:var(--paper);font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.04em;cursor:pointer;padding:6px 8px}
+.scard .ch button.sel.a{background:var(--red);border-color:var(--ink);color:#fff}
 .scard .ch button.sel.b{background:var(--ink);color:var(--paper)}
-.scard.right{border-color:var(--ok);box-shadow:inset 6px 0 0 var(--ok)}
-.scard.wrong{border-color:var(--red);box-shadow:inset 6px 0 0 var(--red)}
+.scard.right{border-color:var(--ok);box-shadow:inset 8px 0 0 var(--ok)}
+.scard.wrong{border-color:var(--red);box-shadow:inset 8px 0 0 var(--red)}
 .scard .ex{font-size:15px;color:var(--grey);display:none}
 .checked .scard .ex{display:block}
 .checked .scard .ch button{pointer-events:none}
-.scorebox{font-family:var(--head);font-size:24px;text-transform:uppercase;border:3px solid var(--ink);background:var(--ochre);display:inline-block;padding:6px 14px;margin:8px 0 14px;box-shadow:4px 4px 0 var(--ink)}
+
+/* ---------- timeline game ---------- */
+.tlg{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 20px}
+@media (max-width:720px){.tlg{grid-template-columns:1fr}}
+.tlg h4{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:15px;margin:0 0 10px}
+.pool,.seq{border:4px dashed var(--ink);padding:10px;min-height:120px;background:rgba(255,250,240,.6)}
+.seq{border-style:solid;background:#fffaf0;counter-reset:s}
+.chip{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;border:3px solid var(--ink);background:var(--paper);padding:9px 12px;margin:0 0 8px;cursor:pointer;min-height:48px;line-height:1.3;font-weight:700}
+.seq .chip{background:#fff}
+.seq .chip::before{counter-increment:s;content:counter(s);font-family:var(--disp);font-weight:900;color:#fff;background:var(--red);min-width:30px;height:30px;display:grid;place-items:center;flex:0 0 auto}
+.chip.good{border-color:var(--ok);background:#e6f0da}
+.chip.bad{border-color:var(--red);background:#f9ddd7}
+.chip small{display:block;font-weight:400;font-family:var(--head);text-transform:uppercase;letter-spacing:.04em;color:var(--red-d);margin-top:3px}
+.emptyhint{font-family:var(--head);text-transform:uppercase;color:var(--grey);font-size:14px;padding:8px}
+
+/* ---------- terms ---------- */
+.terms{display:grid;gap:14px;margin:0 0 20px}
+.term{border:4px solid var(--ink);background:#fffaf0;padding:12px 14px}
+.term p{margin:0 0 8px;font-weight:700}
+.term.good{border-color:var(--ok);box-shadow:inset 8px 0 0 var(--ok)}
+.term.bad{border-color:var(--red);box-shadow:inset 8px 0 0 var(--red)}
+.term .ans{font-family:var(--head);text-transform:uppercase;font-size:14px;color:var(--ok);margin-top:6px}
+
+/* ---------- map ---------- */
+.mapgrid{display:grid;grid-template-columns:.7fr 1.1fr 1fr 1fr 1fr .8fr;grid-auto-rows:60px;gap:5px;margin:0 0 12px;padding:8px;background:#cfe0e6;border:4px solid var(--ink);box-shadow:10px 10px 0 var(--ink);position:relative}
+.mapgrid::after{content:"СХЕМА, ГРАНИЦЫ УСЛОВНЫ";position:absolute;left:10px;top:8px;width:24%;line-height:1.2;font-family:var(--head);font-weight:700;font-size:11px;letter-spacing:.08em;color:#4d6670}
+.tile{overflow:hidden;font-family:var(--head)!important;border:3px solid var(--ink);background:#f6edd6;font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:12px;line-height:1.1;padding:5px;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;word-break:normal;overflow-wrap:normal;-webkit-hyphens:auto;hyphens:auto;min-height:58px}
+.tile.vert{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;letter-spacing:.08em}
+.tile.ctx{background:repeating-linear-gradient(45deg,#d8cdb4 0 6px,#e8dfc8 6px 12px);cursor:default;color:#5b564c;border-style:dashed}
+.tile.su{background:var(--red);color:#fff}
+.tile.de{background:var(--ink);color:var(--paper)}
+.tile.in{background:var(--red);color:#fff;outline:4px solid var(--ochre);outline-offset:-7px}
+.tile.right{box-shadow:0 0 0 4px var(--ok)}
+.tile.wrong{box-shadow:0 0 0 4px var(--ochre);animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 16px;font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:13px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:20px;height:20px;border:3px solid var(--ink);display:inline-block}
+@media (max-width:420px){.tile{font-size:10.5px;padding:3px}}
+
+/* ---------- intel ---------- */
+.intel{display:grid;gap:22px;margin:0 0 20px}
+.tg{background:#f3e9cf;border:4px solid var(--ink);padding:0;box-shadow:8px 8px 0 var(--ink);font-family:var(--mono);font-size:15.5px;line-height:1.55}
+.tg .th{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--ink);color:var(--ochre);padding:8px 12px;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+.tg .tb{padding:12px 14px}
+.tg .tb p{margin:0 0 10px}
+.tg .vote{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.tg .vote button{flex:1 1 150px;min-height:48px;border:3px solid var(--ink);background:var(--paper);font-family:var(--head);font-weight:700;text-transform:uppercase;cursor:pointer}
+.tg .vote button.sel.y{background:var(--ok);color:#fff}
+.tg .vote button.sel.n{background:var(--red);color:#fff}
+.tg .verdict{border-left:8px solid var(--red);background:#fffaf0;padding:10px 12px;font-family:var(--body);font-size:16px;margin-top:8px}
+.tg .verdict b{font-family:var(--head);text-transform:uppercase}
+.tg textarea.t{font-family:var(--body)}
 
 /* ---------- documents ---------- */
-.doc{background:#fbf6e8;border:2px solid #8b8170;box-shadow:6px 6px 0 rgba(20,20,20,.85);padding:22px 20px 18px;margin:0 0 18px;position:relative;font-family:var(--mono);font-size:15.5px;line-height:1.6;overflow-wrap:break-word}
-.doc::before{content:"";position:absolute;left:0;top:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--red) 0 22px,var(--ink) 22px 44px)}
-.doc .dh{font-family:var(--head);text-transform:uppercase;font-size:20px;line-height:1.15;margin:4px 0 4px;letter-spacing:.02em}
+.doc{background:#fbf5e3;border:3px solid var(--ink);box-shadow:10px 10px 0 rgba(18,18,18,.9);padding:24px 20px 18px;margin:0 0 20px;position:relative;font-family:var(--mono);font-size:15.5px;line-height:1.6;overflow-wrap:break-word}
+.doc::before{content:"";position:absolute;left:0;top:0;right:0;height:12px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--ink) 14px 28px)}
+.doc .dh{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:19px;line-height:1.2;margin:6px 0 6px}
 .doc .meta{font-family:var(--body);font-style:italic;font-size:15px;color:var(--grey);margin:0 0 12px}
 .doc p{margin:0 0 .7em}
 .doc .gap{color:var(--grey)}
-.stamp{display:inline-block;margin:2px 0 10px;border:3px solid var(--red);color:var(--red);font-family:var(--head);font-size:15px;letter-spacing:.12em;padding:2px 8px;transform:rotate(-3deg);opacity:.9}
-.docq{background:var(--paper2);border:3px solid var(--ink);padding:14px 16px;margin:-6px 0 28px}
+.stamp{display:inline-block;margin:4px 0 10px;border:4px double var(--red);color:var(--red);font-family:var(--disp);font-weight:900;font-size:14px;letter-spacing:.12em;padding:3px 10px;transform:rotate(-4deg)}
+.docq{background:var(--ochre);border:4px solid var(--ink);padding:16px 16px;margin:-8px 0 34px;box-shadow:10px 10px 0 var(--ink)}
 .docq .q:first-child{margin-top:0}
-.ctx{font-family:var(--body);font-size:16px;border-left:6px solid var(--ochre);padding:4px 0 4px 12px;margin:0 0 14px}
+.ctx{font-family:var(--body);font-size:16px;border-left:8px solid var(--ochre);padding:4px 0 4px 12px;margin:0 0 14px}
 
 /* ---------- dossier ---------- */
-.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:0 0 24px}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 28px}
 .dgrid.two{grid-template-columns:repeat(2,1fr)}
 @media (max-width:860px){.dgrid,.dgrid.two{grid-template-columns:1fr}}
-.dos{border:3px solid var(--ink);background:#f7f0de;box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column}
-.dos .dt{background:var(--red);color:#fff;font-family:var(--head);text-transform:uppercase;padding:10px 12px;font-size:20px;line-height:1.1}
-.dos .dt small{display:block;font-size:14px;letter-spacing:.06em;opacity:.95;margin-top:3px}
-.dos dl{margin:0;padding:10px 12px 14px}
-.dos dt{font-family:var(--head);text-transform:uppercase;font-size:13px;letter-spacing:.08em;color:var(--red-d);margin-top:10px}
+.dos{border:4px solid var(--ink);background:#f9f1dc;box-shadow:10px 10px 0 var(--ink);display:flex;flex-direction:column}
+.dos:nth-child(2){box-shadow:10px 10px 0 var(--red)}
+.dos .dt{background:var(--red);color:#fff;font-family:var(--disp);font-weight:900;text-transform:uppercase;padding:14px 14px;font-size:20px;line-height:1.1;clip-path:polygon(0 0,100% 0,100% 82%,0 100%);padding-bottom:22px}
+.dos:nth-child(2) .dt{background:var(--ink)}
+.dos .dt small{display:block;font-family:var(--head);font-size:14px;letter-spacing:.06em;margin-top:5px;color:var(--ochre)}
+.dos dl{margin:0;padding:8px 14px 16px}
+.dos dt{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.08em;color:var(--red-d);margin-top:12px}
 .dos dt:first-child{margin-top:0}
 .dos dd{margin:2px 0 0;font-size:15.5px;line-height:1.45}
-.tl{list-style:none;margin:0 0 24px;padding:0;border-left:6px solid var(--ink)}
-.tl li{position:relative;padding:4px 0 14px 20px}
-.tl li::before{content:"";position:absolute;left:-13px;top:10px;width:20px;height:20px;background:var(--red);border:3px solid var(--ink);transform:rotate(45deg)}
-.tl .d{font-family:var(--head);text-transform:uppercase;font-size:16px;letter-spacing:.04em;color:var(--red-d);display:block}
+.tl{list-style:none;margin:0 0 26px;padding:0;border-left:8px solid var(--ink)}
+.tl li{position:relative;padding:4px 0 16px 24px}
+.tl li::before{content:"";position:absolute;left:-17px;top:8px;width:24px;height:24px;background:var(--red);border:4px solid var(--ink);transform:rotate(45deg)}
+.tl .d{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:15px;color:var(--red-d);display:block}
 
 /* ---------- quiz ---------- */
-.qz{border:3px solid var(--ink);background:#f7f0de;padding:14px 16px;margin:0 0 16px}
+.qz{border:4px solid var(--ink);background:#f9f1dc;padding:14px 16px;margin:0 0 18px;box-shadow:6px 6px 0 var(--ink)}
 .qz .qt{font-weight:700;margin:0 0 10px}
-.opt{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--ink);background:#fffaf0;padding:10px 12px;margin:0 0 8px;cursor:pointer;min-height:46px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:3px solid var(--ink);background:#fffaf0;padding:10px 12px;margin:0 0 8px;cursor:pointer;min-height:48px}
 .opt input{margin-top:5px;width:20px;height:20px;accent-color:var(--red);flex:0 0 auto}
 .opt.good{border-color:var(--ok);background:#e6efd9}
 .opt.bad{border-color:var(--red);background:#f6dcd6}
 .qz.locked .opt{cursor:default}
 
 /* ---------- simulation ---------- */
-.sim{border:3px solid var(--ink);background:var(--ink);color:var(--paper);box-shadow:8px 8px 0 var(--red);margin:0 0 26px}
-.sim .sh{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 14px;border-bottom:3px solid var(--red);font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-size:14px}
-.sim .sb{padding:16px}
-.sim .date{font-family:var(--head);font-size:clamp(28px,7vw,48px);line-height:1;color:var(--red);text-transform:uppercase;margin:0 0 10px}
+.sim{border:4px solid var(--ink);background:var(--ink);color:var(--paper);box-shadow:12px 12px 0 var(--red);margin:0 0 30px}
+.sim .sh{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 14px;border-bottom:4px solid var(--red);font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:14px}
+.sim .sb{padding:18px 16px}
+.sim .date{font-family:var(--disp);font-weight:900;font-size:clamp(30px,8vw,58px);line-height:.95;color:var(--red);text-transform:uppercase;margin:0 0 14px;transform:rotate(-3deg);transform-origin:left}
 .sim .sit{margin:0 0 14px}
 .sim .ops{display:grid;gap:10px;margin:0 0 12px}
-.sim .ops button{text-align:left;border:3px solid var(--paper);background:transparent;color:var(--paper);padding:12px 14px;cursor:pointer;line-height:1.4;min-height:50px;display:flex;gap:12px;align-items:flex-start}
-.sim .ops button b{font-family:var(--head);font-size:20px;line-height:1;flex:0 0 auto;color:var(--ochre)}
+.sim .ops button{text-align:left;border:3px solid var(--paper);background:transparent;color:var(--paper);padding:12px 14px;cursor:pointer;line-height:1.4;min-height:52px;display:flex;gap:12px;align-items:flex-start}
+.sim .ops button b{font-family:var(--disp);font-weight:900;font-size:22px;line-height:1;flex:0 0 auto;color:var(--ochre)}
 .sim .ops button.sel{background:var(--red);border-color:var(--red)}
 .sim .ops button.real{outline:4px solid var(--ochre);outline-offset:-1px}
 .sim textarea.t{background:#262421;color:var(--paper);border-color:var(--paper)}
-.sim .fact{background:var(--paper);color:var(--ink);border-left:10px solid var(--red);padding:12px 14px;margin:12px 0 4px}
-.sim .fact h4{font-family:var(--head);text-transform:uppercase;margin:0 0 6px;font-size:18px}
-.sim .fact p{margin:0 0 .6em}
-.sim .fact p:last-child{margin:0}
-.prog{height:10px;background:#3a3732;margin:0}
-.prog i{display:block;height:100%;background:var(--red);transition:width .3s}
+.sim .fact{background:var(--paper);color:var(--ink);border-left:12px solid var(--red);padding:12px 14px;margin:12px 0 4px}
+.sim .fact h4{font-family:var(--disp);font-weight:900;text-transform:uppercase;margin:0 0 8px;font-size:16px}
+.sim .fact p{margin:0}
+.prog{height:12px;background:#3a3732;margin:0}
+.prog i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--red) 0 10px,var(--ochre) 10px 20px);transition:width .3s}
 
 /* ---------- misc ---------- */
-.pos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 22px}
+.pos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:0 0 24px}
 @media (max-width:760px){.pos{grid-template-columns:1fr}}
-.toast{position:fixed;left:50%;bottom:calc(18px + var(--safe-b));transform:translateX(-50%);background:var(--ink);color:var(--paper);border:3px solid var(--red);padding:10px 16px;font-family:var(--head);text-transform:uppercase;letter-spacing:.05em;z-index:50;max-width:calc(100% - 30px);text-align:center;display:none}
-.missing{border:3px dashed var(--red);padding:10px 14px;background:#fbe6e1;margin:10px 0}
+.toast{position:fixed;left:50%;bottom:calc(18px + var(--safe-b));transform:translateX(-50%);background:var(--ink);color:var(--paper);border:4px solid var(--red);padding:12px 18px;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.05em;z-index:50;max-width:calc(100% - 30px);text-align:center;display:none;box-shadow:6px 6px 0 var(--ochre)}
+.missing{border:4px dashed var(--red);padding:10px 14px;background:#fbe3dd;margin:10px 0}
 .missing ul{margin:6px 0 0;padding-left:20px}
-footer{border-top:4px solid var(--ink);margin-top:20px;padding:16px 0 calc(24px + var(--safe-b));font-family:var(--head);text-transform:uppercase;font-size:13px;letter-spacing:.06em;color:var(--grey)}
+footer{border-top:8px solid var(--ink);margin-top:20px;padding:16px 0 calc(24px + var(--safe-b));font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.07em;color:var(--grey)}
 .hide{display:none!important}
-@media print{.userbar,.steps,.nextbar,.btn{display:none!important}.card,.doc,.dos{box-shadow:none}}
+.sim,.steps{scroll-margin-top:70px}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateX(-50px) rotate(-1.5deg);transition:opacity .55s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.r2{transform:translateX(50px) rotate(1.5deg)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media print{.userbar,.steps,.nextbar,.btn,.ticker,.bgdeco{display:none!important}.card,.doc,.dos{box-shadow:none}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
+<div class="bgdeco" aria-hidden="true"><i class="c1"></i><i class="w1"></i><i class="w2"></i></div>
+<div class="ticker" aria-hidden="true"><div><span>КОМИНТЕРН</span><b>■</b><span>РАПАЛЛО 1922</span><b>■</b><span>ЛИГА НАЦИЙ 1934</span><b>■</b><span>ИСПАНИЯ</span><b>■</b><span>ХАСАН</span><b>■</b><span>МЮНХЕН 1938</span><b>■</b><span>ПАКТ 23.08.1939</span><b>■</b><span>ХАЛХИН-ГОЛ</span><b>■</b><span>ЗИМНЯЯ ВОЙНА</span><b>■</b><span>22 ИЮНЯ 1941</span><b>■</b><span>КОМИНТЕРН</span><b>■</b><span>РАПАЛЛО 1922</span><b>■</b><span>ЛИГА НАЦИЙ 1934</span><b>■</b><span>ИСПАНИЯ</span><b>■</b><span>ХАСАН</span><b>■</b><span>МЮНХЕН 1938</span><b>■</b><span>ПАКТ 23.08.1939</span><b>■</b><span>ХАЛХИН-ГОЛ</span><b>■</b><span>ЗИМНЯЯ ВОЙНА</span><b>■</b><span>22 ИЮНЯ 1941</span><b>■</b></div></div>
 <header class="poster" id="poster" aria-label="Заголовок">
-  <div class="wedge"></div>
-  <svg class="rays" viewBox="0 0 520 520" aria-hidden="true">
-    <g fill="#141414"><path d="M260 260 L520 120 L520 170Z"/><path d="M260 260 L520 230 L520 280Z"/><path d="M260 260 L520 340 L520 390Z"/><path d="M260 260 L470 520 L420 520Z"/><path d="M260 260 L350 520 L300 520Z"/></g>
-    <circle cx="260" cy="260" r="92" fill="#efe5cf"/><circle cx="260" cy="260" r="56" fill="#d2231c"/>
-  </svg>
-  <div class="band"></div>
-  <div class="inner">
+  <div class="stage">
+    <div class="wedge"></div><div class="blk"></div><div class="disc"></div><div class="bar"></div><div class="bar2"></div>
+    <div class="big1920" aria-hidden="true">1920</div><div class="big1941" aria-hidden="true">1941</div>
     <div class="kicker">Тема 2.5 · История России · две пары</div>
-    <h1>От мировой революции<span>к 22 июня</span></h1>
+    <h1><span class="l1">От мировой</span><span class="l2">революции</span><span class="l3">к 22 июня</span></h1>
     <div class="sub">Внешняя политика СССР в 1920–1930-е годы. СССР накануне Великой Отечественной войны</div>
-    <div class="years">1920—1941</div>
   </div>
 </header>
 
@@ -408,9 +516,9 @@ var TEST2=[
 
 var PAIRS={
  p1:{title:'От мировой революции к коллективной безопасности',span:'1920 – 1938',sheet:'Тема 2.5 · пара 1',
-  steps:[{id:'intro',n:'Две линии'},{id:'sort',n:'Сортировка'},{id:'docs',n:'Документы'},{id:'dos',n:'Досье'},{id:'test',n:'Тест'},{id:'send',n:'Сдать'}]},
+  steps:[{id:'intro',n:'Две линии'},{id:'tl',n:'Лента времени'},{id:'terms',n:'Термины'},{id:'sort',n:'Сортировка'},{id:'docs',n:'Документы'},{id:'dos',n:'Досье'},{id:'test',n:'Тест'},{id:'send',n:'Сдать'}]},
  p2:{title:'От Мюнхена до 22 июня',span:'1938 – 1941',sheet:'Тема 2.5 · пара 2',
-  steps:[{id:'sim',n:'Выбор наркома'},{id:'docs',n:'Документы'},{id:'dos',n:'Досье'},{id:'essay',n:'Эссе'},{id:'test',n:'Тест'},{id:'send',n:'Сдать'}]}
+  steps:[{id:'sim',n:'Выбор наркома'},{id:'docs',n:'Документы'},{id:'map',n:'Карта протокола'},{id:'intel',n:'Разведка'},{id:'dos',n:'Досье'},{id:'essay',n:'Эссе'},{id:'test',n:'Тест'},{id:'send',n:'Сдать'}]}
 };
 
 /* =================== STATE =================== */
@@ -427,6 +535,7 @@ function uid(){return 'T25-'+Date.now().toString(36).toUpperCase()+'-'+Math.rand
 
 /* =================== RENDER =================== */
 function render(){
+  ensure();setTimeout(function(){reveal(false)},30);
   var ub=$('#userbar');$('#poster').classList.toggle('compact',st.view==='pair');
   if(st.view==='login'){ub.classList.add('hide');renderLogin();return}
   ub.classList.remove('hide');
@@ -437,7 +546,7 @@ function render(){
   if(st.view==='home')renderHome();else renderPair();
 }
 function renderLogin(){
-  app.innerHTML='<div class="h2" style="margin-top:30px"><span class="n">!</span><span>Кто работает</span></div>'+
+  app.innerHTML=head('!','Кто работает')+
   '<div class="card"><p>Введите фамилию, имя и группу. Работа сохраняется в этом браузере: если закрыть страницу, ответы не пропадут. В конце каждой пары нажмите «Сдать работу», ответы уйдут преподавателю.</p>'+
   '<label class="f" for="nm">Фамилия и имя</label><input class="t" id="nm" autocomplete="name" value="'+esc(st.name)+'">'+
   '<label class="f" for="gr">Группа</label><input class="t" id="gr" value="'+esc(st.group)+'">'+
@@ -449,19 +558,12 @@ function renderLogin(){
     st.name=n;st.group=g;if(!st.id)st.id=uid();st.view='home';save();render();scrollTo(0,0);
   };
 }
-function pairProgress(p){
-  if(p==='p1'){var a=0,t=0;DOCS1.forEach(function(d){d.qs.forEach(function(q){t++;if((st.ans[q.id]||'').trim().length>=15)a++})});
-    ['dosq1','dosq2','dosq3','introq'].forEach(function(k){t++;if((st.ans[k]||'').trim().length>=15)a++});
-    return {done:a+(st.sortChecked?1:0)+(st.t1done?1:0),all:t+2}}
-  var b=0,u=0;DOCS2.forEach(function(d){d.qs.forEach(function(q){u++;if((st.ans[q.id]||'').trim().length>=15)b++})});
-  ['dos2q1','dos2q2','dos2q3'].forEach(function(k){u++;if((st.ans[k]||'').trim().length>=15)b++});
-  return {done:b+Object.keys(st.sim).length+(st.t2done?1:0)+(wc(st.essay)>=150?1:0),all:u+SIM.length+2}
-}
+function pairProgress(p){var S=PAIRS[p].steps.filter(function(x){return x.id!=='send'});return {done:S.filter(function(x){return stepDone(p,x.id)}).length,all:S.length}}
 function renderHome(){
-  var h='<div class="h2"><span class="n">→</span><span>Две пары, один сайт</span></div><p class="lead">Выберите пару, которую проходите сейчас</p><div class="pairs">';
+  var h=head('→','Две пары, один сайт','Выберите пару, которую проходите сейчас')+'<div class="pairs">';
   ['p1','p2'].forEach(function(p,i){var P=PAIRS[p],pr=pairProgress(p);
     h+='<div class="pair"><div class="top"><div class="num">0'+(i+1)+'</div><div class="nm">'+P.title+'</div></div><div class="body">'+
-    '<div class="status'+(st.sent[p]?' ok':'')+'">'+(st.sent[p]?'Сдано · '+esc(st.sent[p]):'Выполнено: '+pr.done+' из '+pr.all)+'</div>'+
+    '<div class="status'+(st.sent[p]?' ok':'')+'">'+(st.sent[p]?'Сдано · '+esc(st.sent[p]):'Этапов выполнено: '+pr.done+' из '+pr.all)+'</div>'+
     '<div class="muted">'+P.span+'</div><ol>'+P.steps.map(function(s){return'<li>'+s.n+'</li>'}).join('')+'</ol>'+
     '<button class="btn'+(i?' red':'')+'" data-p="'+p+'" type="button">Открыть пару '+(i+1)+'</button></div></div>'});
   h+='</div><div class="card"><h3>Как работать</h3><p>Пройдите этапы по порядку: кнопки этапов находятся вверху пары, их можно листать пальцем. Письменные ответы пишите своими словами, 2–4 предложения на вопрос. Тест в конце пары проверяется сразу. После теста откройте этап «Сдать» и отправьте работу.</p></div>';
@@ -482,12 +584,17 @@ function renderPair(){
   if(nx)nx.onclick=function(){st.step++;save();render();scrollTo(0,0)};
   var cur=$('.steps .cur');if(cur&&cur.scrollIntoView){try{cur.scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
   var stage=$('#stage');
-  var fn={p1:{intro:sIntro,sort:sSort,docs:function(e){sDocs(e,DOCS1,'Документы: 1920–1935','Прочитайте выдержки и ответьте на вопросы под каждым документом.')},dos:sDos1,test:function(e){sTest(e,TEST1,'t1','t1done')},send:sSend},
-          p2:{sim:sSim,docs:function(e){sDocs(e,DOCS2,'Документы: 1938–1941','Шесть документов от Женевы до сообщения ТАСС. Секретный протокол приведён полностью.')},dos:sDos2,essay:sEssay,test:function(e){sTest(e,TEST2,'t2','t2done')},send:sSend}};
+  var fn={p1:{intro:sIntro,tl:sTimeline,terms:sTerms,sort:sSort,docs:function(e){sDocs(e,DOCS1,'Документы: 1920–1935','Прочитайте выдержки и ответьте на вопросы под каждым документом.')},dos:sDos1,test:function(e){sTest(e,TEST1,'t1','t1done')},send:sSend},
+          p2:{sim:sSim,map:sMap,intel:sIntel,docs:function(e){sDocs(e,DOCS2,'Документы: 1938–1941','Шесть документов от Женевы до сообщения ТАСС. Секретный протокол приведён полностью.')},dos:sDos2,essay:sEssay,test:function(e){sTest(e,TEST2,'t2','t2done')},send:sSend}};
   fn[st.pair][s.id](stage);
   window.scrollTo&&window.scrollTo(window.scrollX,window.scrollY);
 }
 function stepDone(p,id){
+  ensure();
+  if(id==='tl')return st.tl.A.done&&st.tl.B.done&&(st.ans.tlq1||'').trim().length>=15;
+  if(id==='terms')return !!st.termsDone;
+  if(id==='map')return !!(st.mapAdone&&st.mapBdone);
+  if(id==='intel')return !!st.intelDone;
   if(id==='sort')return st.sortChecked;
   if(id==='test')return p==='p1'?st.t1done:st.t2done;
   if(id==='sim')return Object.keys(st.sim).length===SIM.length;
@@ -500,7 +607,7 @@ function stepDone(p,id){
 }
 function ta(id,q,ph){return '<p class="q">'+q+'</p><textarea class="t" data-a="'+id+'" placeholder="'+(ph||'Ваш ответ')+'">'+esc(st.ans[id]||'')+'</textarea>'}
 function bindTA(root){$$('textarea[data-a]',root).forEach(function(t){t.addEventListener('input',function(){st.ans[t.getAttribute('data-a')]=t.value;save()})})}
-function head(n,t,l){return '<div class="h2"><span class="n">'+n+'</span><span>'+t+'</span></div>'+(l?'<p class="lead">'+l+'</p>':'')}
+function head(n,t,l){var num=st.view==='pair'?st.step+1:n;if(typeof num==='number')num=(num<10?'0':'')+num;return '<div class="h2"><span class="bign">'+num+'</span><span class="ttl">'+t+'</span></div>'+(l?'<p class="lead">'+l+'</p>':'')}
 
 /* ---------- pair 1 ---------- */
 function sIntro(e){
@@ -604,7 +711,7 @@ function sSim(e){
 }
 function sDos2(e){
   e.innerHTML=head('3','Досье','Две войны и новые границы')+dosHTML(DOS2,true)+
-  '<div class="h2" style="font-size:28px"><span>Новые территории 1939–1940</span></div><ul class="tl">'+TL.map(function(t){return'<li><span class="d">'+t[0]+'</span>'+t[1]+'</li>'}).join('')+'</ul>'+
+  '<div class="h2" style="min-height:60px"><span class="ttl" style="font-size:22px;margin-left:0">Новые территории 1939–1940</span></div><ul class="tl">'+TL.map(function(t){return'<li><span class="d">'+t[0]+'</span>'+t[1]+'</li>'}).join('')+'</ul>'+
   '<div class="docq">'+ta('dos2q1','Сравните Халхин-Гол и Зимнюю войну: цели СССР, противник, потери, международные последствия.')+
   ta('dos2q2','Какие выводы о Красной армии могли сделать в Берлине и в Токио по итогам 1939–1940 гг.?')+
   ta('dos2q3','Какие из изменений границ 1939–1940 гг. прямо следуют из секретного протокола 23 августа 1939 г.?')+'</div>';
@@ -624,12 +731,17 @@ function sEssay(e){
 
 /* ---------- send ---------- */
 function missingList(p){
+  ensure();
   var m=[];
   if(p==='p1'){if(!stepDone('p1','intro'))m.push('Вопрос на этапе «Две линии»');if(!st.sortChecked)m.push('Сортировка не проверена');
+    if(!(st.tl.A.done&&st.tl.B.done))m.push('Лента времени не проверена');if((st.ans.tlq1||'').trim().length<15)m.push('Лента времени: вопрос');
+    if(!st.termsDone)m.push('Термины не проверены');if((st.ans.termq1||'').trim().length<15)m.push('Термины: вопрос');
     DOCS1.forEach(function(d,i){d.qs.forEach(function(q,j){if((st.ans[q.id]||'').trim().length<15)m.push('Д'+(i+1)+', вопрос '+(j+1))})});
     ['dosq1','dosq2','dosq3'].forEach(function(k,i){if((st.ans[k]||'').trim().length<15)m.push('Досье, вопрос '+(i+1))});
     if(!st.t1done)m.push('Тест не проверен');}
-  else{var n=Object.keys(st.sim).length;if(n<SIM.length)m.push('Выбор наркома: пройдено '+n+' из '+SIM.length);
+  else{if(!(st.mapAdone&&st.mapBdone))m.push('Карта протокола не проверена');['mapq1','mapq2'].forEach(function(k,i){if((st.ans[k]||'').trim().length<15)m.push('Карта, вопрос '+(i+1))});
+    if(!st.intelDone)m.push('Разведка не проверена');['intq1','intq2'].forEach(function(k,i){if((st.ans[k]||'').trim().length<15)m.push('Разведка, вопрос '+(i+1))});
+    var n=Object.keys(st.sim).length;if(n<SIM.length)m.push('Выбор наркома: пройдено '+n+' из '+SIM.length);
     DOCS2.forEach(function(d,i){d.qs.forEach(function(q,j){if((st.ans[q.id]||'').trim().length<15)m.push('Д'+(i+4)+', вопрос '+(j+1))})});
     ['dos2q1','dos2q2','dos2q3'].forEach(function(k,i){if((st.ans[k]||'').trim().length<15)m.push('Досье, вопрос '+(i+1))});
     if(wc(st.essay)<150)m.push('Эссе: '+wc(st.essay)+' слов из 150');if(!st.t2done)m.push('Тест не проверен');}
@@ -649,14 +761,19 @@ function sSend(e){
     send(p,function(ok,msg){if(ok){st.sent[p]=fmt(Date.now());save();toast('Работа отправлена');render()}else{b.disabled=false;b.textContent='Повторить отправку';toast('Не отправлено: '+(msg||'ошибка')+'. Проверьте интернет')}})};
 }
 function answersText(p){
+  ensure();
   var L=[];function A(k){return (st.ans[k]||'').trim()||'—'}
   if(p==='p1'){L.push('[Разминка] '+A('introq'));
+    L.push('[Лента] раунд 1: '+tlScore('A')+'/10; раунд 2: '+tlScore('B')+'/10');L.push('[Лента, вопрос] '+A('tlq1'));
+    L.push('[Термины] '+termsScore()+'/'+TERMS.length+' · '+TERMS.map(function(x,i){return (i+1)+':'+(st.terms[i]===i?'+':'−')}).join(' '));L.push('[Термины, вопрос] '+A('termq1'));
     L.push('[Сортировка] '+SORT.map(function(c,i){return (i+1)+':'+(st.sort[c.id]===c.k?'+':'−')}).join(' '));
     DOCS1.forEach(function(d,i){d.qs.forEach(function(q,j){L.push('[Д'+(i+1)+'.'+(j+1)+'] '+A(q.id))})});
     ['dosq1','dosq2','dosq3'].forEach(function(k,i){L.push('[Досье '+(i+1)+'] '+A(k))});
     L.push('[Тест] '+TEST1.map(function(q,i){return (i+1)+':'+(st.t1[i]===q.k?'+':'−')}).join(' '));}
   else{SIM.forEach(function(x,i){var c=st.sim[i];L.push('[Нарком '+(i+1)+' · '+x.d+'] выбор '+(c==null?'—':'АБВ'[c]+(c===x.r?' (совпал)':' (реально '+'АБВ'[x.r]+')'))+'; объяснение: '+((st.simWhy[i]||'').trim()||'—'))});
     L.push('[Нарком итог] '+A('simq'));
+    L.push('[Карта] шаг 1: '+mapScore(MAPA,st.mapA)+'/12; шаг 2: '+mapScore(MAPB,st.mapB,true)+'/12');L.push('[Карта 1] '+A('mapq1'));L.push('[Карта 2] '+A('mapq2'));
+    INTEL.forEach(function(x,i){L.push('[Разведка '+(i+1)+'] '+(st.intel[i]==='y'?'доверять':st.intel[i]==='n'?'не доверять':'—')+(st.intel[i]===x.k?' (верно)':' (ошибка)')+'; почему: '+((st.intelWhy[i]||'').trim()||'—'))});L.push('[Разведка, вопрос 1] '+A('intq1'));L.push('[Разведка, вопрос 2] '+A('intq2'));
     DOCS2.forEach(function(d,i){d.qs.forEach(function(q,j){L.push('[Д'+(i+4)+'.'+(j+1)+'] '+A(q.id))})});
     ['dos2q1','dos2q2','dos2q3'].forEach(function(k,i){L.push('[Досье '+(i+1)+'] '+A(k))});
     L.push('[Эссе, '+wc(st.essay)+' сл.] '+(st.essay.trim()||'—'));
@@ -665,8 +782,8 @@ function answersText(p){
 }
 function payload(p){
   var score,max,scores;
-  if(p==='p1'){var a=sortScore(),b=st.t1done?testScore(TEST1,st.t1):0;score=a+b;max=SORT.length+TEST1.length;scores='сортировка '+a+'/'+SORT.length+'; тест '+b+'/'+TEST1.length}
-  else{var m=Object.keys(st.sim).filter(function(k){return st.sim[k]===SIM[k].r}).length,t=st.t2done?testScore(TEST2,st.t2):0;score=t;max=TEST2.length;scores='тест '+t+'/'+TEST2.length+'; совпадений с реальными решениями '+m+'/'+SIM.length+'; эссе '+wc(st.essay)+' слов'}
+  ensure();if(p==='p1'){var a=sortScore(),b=st.t1done?testScore(TEST1,st.t1):0,c1=tlScore('A')+tlScore('B'),d1=termsScore();score=a+b+c1+d1;max=SORT.length+TEST1.length+20+TERMS.length;scores='лента '+c1+'/20; термины '+d1+'/'+TERMS.length+'; сортировка '+a+'/'+SORT.length+'; тест '+b+'/'+TEST1.length}
+  else{var m=Object.keys(st.sim).filter(function(k){return st.sim[k]===SIM[k].r}).length,t=st.t2done?testScore(TEST2,st.t2):0,ma=mapScore(MAPA,st.mapA)+mapScore(MAPB,st.mapB,true),iq=intelScore();score=t+ma+iq;max=TEST2.length+24+INTEL.length;scores='карта '+ma+'/24; разведка '+iq+'/'+INTEL.length+'; тест '+t+'/'+TEST2.length+'; совпадений с реальными решениями '+m+'/'+SIM.length+'; эссе '+wc(st.essay)+' слов'}
   var now=Date.now(),started=st.started[p]||now;
   return JSON.stringify({sheet:PAIRS[p].sheet,id:st.id+'-'+p,name:st.name,group:st.group,status:missingList(p).length?'неполная':'завершён',
     started:fmt(started),ended:fmt(now),score:score,max:max,percent:Math.round(score/max*100),duration:Math.round((now-started)/1000),
@@ -679,6 +796,204 @@ function send(p,cb){
   fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body,redirect:'follow',signal:ctl?ctl.signal:undefined})
   .then(function(r){return r.json()}).then(function(j){clearTimeout(tm);if(j&&j.ok)cb(true);else cb(false,'таблица ответила ошибкой')})
   .catch(function(){clearTimeout(tm);fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body}).then(function(){cb(true)}).catch(function(){cb(false,'нет связи')})});
+}
+
+
+/* ===== added modules ===== */
+var TLR={A:[
+ {t:'Создан Коммунистический интернационал',d:'Март 1919'},
+ {t:'Красная армия остановлена под Варшавой',d:'Август 1920'},
+ {t:'Рапалльский договор с Германией',d:'Апрель 1922'},
+ {t:'Нота Керзона: британский ультиматум Советской России',d:'Май 1923'},
+ {t:'Великобритания признаёт СССР',d:'Февраль 1924'},
+ {t:'Берлинский договор о нейтралитете с Германией',d:'Апрель 1926'},
+ {t:'Великобритания разрывает дипломатические отношения с СССР',d:'Май 1927'},
+ {t:'Вооружённый конфликт на КВЖД с китайскими властями',d:'Июль–декабрь 1929'},
+ {t:'Япония захватывает Маньчжурию',d:'Сентябрь 1931'},
+ {t:'Гитлер становится рейхсканцлером Германии',d:'Январь 1933'}],
+B:[
+ {t:'СССР и США устанавливают дипломатические отношения',d:'Ноябрь 1933'},
+ {t:'СССР вступает в Лигу Наций',d:'Сентябрь 1934'},
+ {t:'Договоры о взаимной помощи с Францией и Чехословакией',d:'Май 1935'},
+ {t:'VII конгресс Коминтерна призывает к народным фронтам',d:'Июль–август 1935'},
+ {t:'Начало гражданской войны в Испании',d:'Июль 1936'},
+ {t:'Германия и Япония подписывают Антикоминтерновский пакт',d:'Ноябрь 1936'},
+ {t:'Япония начинает большую войну против Китая',d:'Июль 1937'},
+ {t:'Аншлюс: Австрия присоединена к Германии',d:'Март 1938'},
+ {t:'Бои у озера Хасан',d:'Июль–август 1938'},
+ {t:'Мюнхенское соглашение',d:'Сентябрь 1938'}]};
+
+var TERMS=[
+ {t:'Коминтерн',d:'Международное объединение коммунистических партий с центром в Москве, действовало в 1919–1943 гг.'},
+ {t:'Мировая революция',d:'Ожидание, что вслед за Россией социалистическая революция охватит развитые страны Европы.'},
+ {t:'Социализм в одной стране',d:'Тезис о том, что социализм можно построить в СССР, не дожидаясь победы революции на Западе.'},
+ {t:'Полоса признания',d:'Установление дипломатических отношений с СССР рядом ведущих государств в 1924–1925 гг.'},
+ {t:'Режим наибольшего благоприятствования',d:'Обязательство предоставлять торговому партнёру условия не хуже, чем любой третьей стране.'},
+ {t:'Коллективная безопасность',d:'Система договоров, по которой государства обязуются вместе противостоять агрессору.'},
+ {t:'Лига Наций',d:'Международная организация, созданная после Первой мировой войны для предотвращения новых войн.'},
+ {t:'Умиротворение',d:'Политика уступок агрессору ради сохранения мира, которую в 1930-е гг. вели Англия и Франция.'},
+ {t:'Невмешательство',d:'Решение европейских держав не помогать ни одной из сторон гражданской войны в Испании; контроль вёл комитет в Лондоне.'},
+ {t:'Аншлюс',d:'Присоединение Австрии к Германии в марте 1938 г.'},
+ {t:'Народный фронт',d:'Союз коммунистов, социалистов и либералов против фашизма, курс VII конгресса Коминтерна.'},
+ {t:'Антикоминтерновский пакт',d:'Соглашение Германии и Японии 1936 г., к которому в 1937 г. присоединилась Италия.'}
+];
+
+var MAP=[
+ {id:'sea',n:'Балтийское море',c:'1/3',r:'1/5',ctx:'sea'},
+ {id:'fin',n:'Финляндия',c:'3/6',r:'1/3'},
+ {id:'kar',n:'Карел. перешеек, Выборг',c:'6/7',r:'1/3'},
+ {id:'ussr',n:'СССР в границах 1939 г.',c:'6/7',r:'3/10',ctx:1,v:1},
+ {id:'est',n:'Эстония',c:'3/6',r:'3/4'},
+ {id:'lat',n:'Латвия',c:'3/6',r:'4/5'},
+ {id:'lit',n:'Литва (с Вильно)',c:'3/6',r:'5/6'},
+ {id:'epr',n:'В. Пруссия',c:'2/3',r:'5/6',ctx:1},
+ {id:'ger',n:'Германия',c:'1/2',r:'5/9',ctx:1,v:1},
+ {id:'pw',n:'Польша: запад',c:'2/3',r:'6/8'},
+ {id:'pm',n:'Польша: Висла – Буг',c:'3/4',r:'6/8'},
+ {id:'bel',n:'Зап. Белоруссия',c:'4/6',r:'6/7'},
+ {id:'ukr',n:'Западная Украина',c:'4/6',r:'7/8'},
+ {id:'buk',n:'Сев. Буковина',c:'3/5',r:'8/9'},
+ {id:'bes',n:'Бессарабия',c:'5/6',r:'8/10'},
+ {id:'rom',n:'Румыния',c:'2/5',r:'9/10'}
+];
+var MAPA={fin:'su',kar:'su',est:'su',lat:'su',lit:'de',pw:'de',pm:'su',bel:'su',ukr:'su',buk:'',bes:'su',rom:''};
+var MAPB={fin:false,kar:true,est:true,lat:true,lit:true,pw:false,pm:false,bel:true,ukr:true,buk:true,bes:true,rom:false};
+
+var INTEL=[
+ {h:'Москва · 20 марта 1941 г.',src:'Сводка Разведывательного управления Генштаба (начальник Ф. И. Голиков)',
+  x:'Сводка перечисляет сведения о сосредоточении германских войск у границ СССР. Вывод: самым вероятным сроком начала действий против СССР будет момент после победы над Англией или после заключения с ней мира; слухи о скорой войне могут быть дезинформацией английской и даже германской разведки.',
+  k:'n',v:'Факты в сводке были верными, а вывод ошибочным. Германия напала на СССР, не закончив войну с Англией. Этот вывод совпадал с тем, что хотело услышать руководство.'},
+ {h:'Лондон – Москва · апрель 1941 г.',src:'Послание У. Черчилля И. В. Сталину, передано через посла С. Криппса',
+  x:'После переворота в Югославии в конце марта германские танковые дивизии, начавшие переброску из Румынии в южную Польшу, были возвращены назад. Черчилль предлагает советскому руководству оценить значение этого факта.',
+  k:'y',v:'Сведения были точными: британцы знали о переброске войск по расшифровкам германской связи. Но в Москве послание сочли попыткой втянуть СССР в войну с Германией.'},
+ {h:'Берлин · весна 1941 г.',src:'Сведения, распространяемые германскими военными и дипломатами',
+  x:'Войска на востоке отведены туда для отдыха и подготовки, вне досягаемости британской авиации. Главный удар готовится по Англии: вермахт проводит учения по высадке десанта на побережье Ла-Манша.',
+  k:'n',v:'Дезинформация. Учения по высадке в Англию (операции «Акула» и «Гарпун») проводились, чтобы прикрыть сосредоточение войск против СССР.'},
+ {h:'Берлин · 13 июня 1941 г.',src:'Статья Й. Геббельса «Крит как пример» в газете «Фёлькишер беобахтер»',
+  x:'Статья намекает, что захват Крита с воздуха стал репетицией высадки в Англии. Тираж газеты в тот же день изымают из продажи, будто министр выдал военную тайну.',
+  k:'n',v:'Дезинформация. Изъятие тиража было инсценировкой: иностранные журналисты должны были поверить, что следующий удар будет по Англии.'},
+ {h:'Токио · май – июнь 1941 г.',src:'Донесения Р. Зорге («Рамзай»), Разведуправление',
+  x:'Германские военные в Токио говорят о подготовке нападения на СССР. Сроки в донесениях меняются: конец мая, затем середина и вторая половина июня.',
+  k:'y',v:'Сведения о подготовке нападения были верными, хотя сроки менялись: в Берлине их тоже несколько раз переносили. Из-за этого в Москве донесениям доверяли меньше.'},
+ {h:'Берлин · 17 июня 1941 г.',src:'«Старшина» (офицер штаба люфтваффе Х. Шульце-Бойзен), сообщение НКГБ',
+  x:'Все военные мероприятия Германии по подготовке вооружённого выступления против СССР полностью закончены, удар можно ожидать в любое время.',
+  k:'y',v:'Сведения были точными. Сталин написал на донесении, что это не источник, а дезинформатор.'},
+ {h:'Москва · июнь 1941 г.',src:'Сводка НКГБ о германском посольстве',
+  x:'Наблюдается массовый отъезд в Германию сотрудников посольства, их жён и детей с вещами.',
+  k:'y',v:'Достоверный и очень серьёзный признак: дипломаты вывозят семьи, когда ждут разрыва отношений.'},
+ {h:'Граница · вечер 21 июня 1941 г.',src:'Допрос перебежчика, ефрейтора вермахта А. Лискова',
+  x:'Перебежчик переплыл Буг и заявил, что наступление германской армии начнётся на рассвете 22 июня.',
+  k:'y',v:'Правда. Через несколько часов, в 4 часа утра 22 июня, Германия напала на СССР.'}
+];
+
+function seededShuffle(arr,seed){var a=arr.slice(),s=0;for(var i=0;i<seed.length;i++)s=(s*31+seed.charCodeAt(i))>>>0;
+  for(var j=a.length-1;j>0;j--){s=(s*1103515245+12345)>>>0;var k=s%(j+1);var t=a[j];a[j]=a[k];a[k]=t}return a}
+function ensure(){st.tl=st.tl||{A:{seq:[],done:false},B:{seq:[],done:false}};st.terms=st.terms||{};st.mapA=st.mapA||{};st.mapB=st.mapB||{};st.intel=st.intel||{};st.intelWhy=st.intelWhy||{}}
+function tlScore(R){var s=st.tl[R];return s.seq.filter(function(x,i){return x===i}).length}
+function sTimeline(e){
+  ensure();
+  var h=head(0,'Лента времени','Расставьте события по порядку')+
+  '<div class="card"><p>Два раунда по десять событий. Нажимайте карточки слева в том порядке, в каком события происходили: от раннего к позднему. Ошиблись, нажмите карточку в своём списке, и она вернётся обратно. Даты откроются после проверки.</p></div>';
+  ['A','B'].forEach(function(R,ri){var S=st.tl[R],D=TLR[R];
+    var order=seededShuffle(D.map(function(x,i){return i}),st.id+R);
+    var pool=order.filter(function(i){return S.seq.indexOf(i)<0});
+    h+='<div class="h2" style="min-height:60px;margin-top:20px"><span class="ttl" style="font-size:22px;margin-left:0">Раунд '+(ri+1)+': '+(R==='A'?'1919–1933':'1933–1938')+'</span></div>';
+    if(S.done)h+='<div class="scorebox">На своём месте: '+tlScore(R)+' из '+D.length+'</div>';
+    h+='<div class="tlg"><div><h4>Карточки</h4><div class="pool" data-r="'+R+'">'+(pool.length?pool.map(function(i){return'<button type="button" class="chip" data-add="'+i+'">'+D[i].t+'</button>'}).join(''):'<div class="emptyhint">Все карточки разложены</div>')+'</div></div>'+
+       '<div><h4>Ваш порядок</h4><div class="seq">'+(S.seq.length?S.seq.map(function(i,pos){var c=S.done?(i===pos?' good':' bad'):'';return'<button type="button" class="chip'+c+'" data-del="'+i+'"><span>'+D[i].t+(S.done?'<small>'+D[i].d+(i===pos?'':' · должно быть на месте '+(i+1))+'</small>':'')+'</span></button>'}).join(''):'<div class="emptyhint">Нажимайте карточки слева</div>')+'</div></div></div>';
+    if(!S.done)h+='<div style="margin:0 0 24px"><button class="btn red" type="button" data-chk="'+R+'">Проверить раунд '+(ri+1)+'</button></div>';
+  });
+  h+='<div class="docq">'+ta('tlq1','Найдите на ленте момент, после которого главной угрозой для СССР стала Германия. Какие события 1933–1934 гг. показывают поворот советской внешней политики?')+'</div>';
+  e.innerHTML=h;bindTA(e);
+  $$('[data-add]',e).forEach(function(b){b.onclick=function(){var R=b.closest('.pool').getAttribute('data-r');if(st.tl[R].done)return;st.tl[R].seq.push(+b.getAttribute('data-add'));save();keep(function(){sTimeline(e)})}});
+  $$('[data-del]',e).forEach(function(b){b.onclick=function(){var R=b.closest('.tlg').querySelector('.pool').getAttribute('data-r');if(st.tl[R].done)return;var v=+b.getAttribute('data-del');st.tl[R].seq=st.tl[R].seq.filter(function(x){return x!==v});save();keep(function(){sTimeline(e)})}});
+  $$('[data-chk]',e).forEach(function(b){b.onclick=function(){var R=b.getAttribute('data-chk');if(st.tl[R].seq.length<TLR[R].length){toast('Разложите все 10 карточек');return}st.tl[R].done=true;save();keep(function(){sTimeline(e)});refreshSteps()}});
+}
+function keep(fn){var y=window.scrollY;fn();window.scrollTo(0,y);reveal(true)}
+function termsScore(){return TERMS.filter(function(x,i){return st.terms[i]===i}).length}
+function sTerms(e){
+  ensure();var done=st.termsDone;
+  var opts=seededShuffle(TERMS.map(function(x,i){return i}),st.id+'terms');
+  var h=head(0,'Термины','12 понятий эпохи')+
+  '<div class="card"><p>К каждому определению подберите понятие из списка. Каждое понятие подходит только к одному определению. После проверки ответы изменить нельзя.</p></div>';
+  if(done)h+='<div class="scorebox">Верно: '+termsScore()+' из '+TERMS.length+'</div>';
+  var used={};Object.keys(st.terms).forEach(function(k){if(st.terms[k]!=null)used[st.terms[k]]=k});
+  h+='<div class="terms">'+TERMS.map(function(x,i){var v=st.terms[i];var cls=done?(v===i?' good':' bad'):'';
+    return'<div class="term'+cls+'"><p>'+(i+1)+'. '+x.d+'</p><select class="t" data-term="'+i+'"'+(done?' disabled':'')+'><option value="">— выберите понятие —</option>'+
+    opts.map(function(j){return'<option value="'+j+'"'+(v===j?' selected':'')+'>'+TERMS[j].t+(used[j]!=null&&+used[j]!==i&&!done?' (уже выбрано)':'')+'</option>'}).join('')+'</select>'+
+    (done&&v!==i?'<div class="ans">Правильно: '+x.t+'</div>':'')+'</div>'}).join('')+'</div>';
+  if(!done)h+='<div style="margin:10px 0 24px"><button class="btn red" id="termchk" type="button">Проверить</button></div>';
+  h+='<div class="docq">'+ta('termq1','Чем политика умиротворения отличалась от политики коллективной безопасности? Приведите по одному примеру из 1930-х гг.')+'</div>';
+  e.innerHTML=h;bindTA(e);
+  $$('[data-term]',e).forEach(function(s){s.onchange=function(){var i=+s.getAttribute('data-term');st.terms[i]=s.value===''?null:+s.value;save();keep(function(){sTerms(e)})}});
+  var c=$('#termchk');if(c)c.onclick=function(){var n=TERMS.filter(function(x,i){return st.terms[i]!=null}).length;if(n<TERMS.length){toast('Заполнено '+n+' из '+TERMS.length);return}st.termsDone=true;save();keep(function(){sTerms(e)});refreshSteps()};
+}
+function mapScore(K,S,isB){return Object.keys(K).filter(function(id){return isB?(!!S[id])===K[id]:(S[id]||'')===K[id]}).length}
+function mapHTML(which){
+  var A=which==='A',S=A?st.mapA:st.mapB,K=A?MAPA:MAPB,done=A?st.mapAdone:st.mapBdone;
+  return '<div class="mapgrid" data-map="'+which+'">'+MAP.map(function(t){
+    var st2='grid-column:'+t.c+';grid-row:'+t.r;
+    if(t.ctx==='sea')return'<div class="tile ctx" style="'+st2+';background:transparent;border:none;color:#4d6670;font-style:italic">'+t.n+'</div>';
+    if(t.ctx)return'<div class="tile ctx'+(t.v?' vert':'')+'" style="'+st2+'">'+t.n+'</div>';
+    var v=S[t.id],cls='';
+    if(A)cls=v==='su'?' su':v==='de'?' de':'';else cls=v?' in':'';
+    if(done){var ok=A?((v||'')===K[t.id]):((!!v)===K[t.id]);cls+=ok?' right':' wrong'}
+    return'<button type="button" class="tile'+cls+'" data-t="'+t.id+'" style="'+st2+'">'+t.n+'</button>'}).join('')+'</div>';
+}
+function sMap(e){
+  ensure();
+  var h=head(0,'Карта протокола','Сферы интересов 1939 г. и новые границы 1940 г.')+
+  '<div class="card"><p>Перед вами схема Восточной Европы (не точная карта: области показаны блоками). Задание из двух шагов. Сначала по тексту секретного протокола от 23 августа 1939 г. отметьте сферы интересов. Потом отметьте, что на самом деле вошло в состав СССР к августу 1940 г.</p></div>'+
+  '<div class="card ink"><h3>Шаг 1. Протокол 23 августа 1939 г.</h3><p>Нажимайте на область: первое нажатие — сфера СССР (красный), второе — сфера Германии (чёрный), третье — без отметки. Румыния и Северная Буковина в протоколе не упомянуты отдельно. Текст протокола есть на этапе «Документы».</p></div>'+
+  '<p class="muted">«Польша: запад» — земли западнее рек Нарев, Висла, Сан. «Польша: Висла – Буг» — Люблинское и восточная часть Варшавского воеводства. «Литва» показана вместе с Вильно (Виленским краем).</p><div class="legend"><span><i style="background:var(--red)"></i>Сфера СССР</span><span><i style="background:var(--ink)"></i>Сфера Германии</span><span><i style="background:#f6edd6"></i>Нет отметки</span></div>'+mapHTML('A');
+  if(st.mapAdone)h+='<div class="scorebox">Шаг 1: верно '+mapScore(MAPA,st.mapA)+' из 12</div><div class="card"><p>По протоколу к советской сфере отнесены Финляндия, Эстония, Латвия, восточная Польша до линии рек Нарев, Висла, Сан и Бессарабия. Литва попала в германскую сферу. Северная Буковина и остальная Румыния в протоколе не названы.</p></div>';
+  else h+='<div style="margin:6px 0 26px"><button class="btn red" id="mapA" type="button">Проверить шаг 1</button></div>';
+  h+='<div class="card ink"><h3>Шаг 2. Что вошло в СССР к августу 1940 г.</h3><p>Нажмите на области, которые к августу 1940 г. вошли в состав СССР целиком. Повторное нажатие снимает отметку.</p></div>'+
+  '<div class="legend"><span><i style="background:var(--red);outline:3px solid var(--ochre);outline-offset:-6px"></i>Вошло в СССР</span></div>'+mapHTML('B');
+  if(st.mapBdone)h+='<div class="scorebox">Шаг 2: верно '+mapScore(MAPB,st.mapB,true)+' из 12</div><div class="card"><p>28 сентября 1939 г. новый секретный протокол обменял сферы: Литва отошла к СССР, а Люблинское и часть Варшавского воеводства, то есть земли между Вислой и Бугом, к Германии. От Финляндии после Зимней войны СССР получил Карельский перешеек с Выборгом, но не всю страну. Северную Буковину СССР потребовал у Румынии в июне 1940 г. сверх протокола.</p></div>';
+  else h+='<div style="margin:6px 0 26px"><button class="btn red" id="mapB" type="button">Проверить шаг 2</button></div>';
+  h+='<div class="docq">'+ta('mapq1','Сравните два шага. Какие территории СССР получил сверх протокола 23 августа, а какие отдал в обмен? Когда и как это было оформлено?')+
+     ta('mapq2','Почему часть протокола, касавшаяся Финляндии, не была выполнена полностью?')+'</div>';
+  e.innerHTML=h;bindTA(e);
+  $$('[data-map] [data-t]',e).forEach(function(b){b.onclick=function(){var w=b.closest('[data-map]').getAttribute('data-map'),id=b.getAttribute('data-t');
+    if(w==='A'){if(st.mapAdone)return;var v=st.mapA[id]||'';st.mapA[id]=v===''?'su':v==='su'?'de':''}
+    else{if(st.mapBdone)return;st.mapB[id]=!st.mapB[id]}
+    save();keep(function(){sMap(e)})}});
+  var a=$('#mapA'),b2=$('#mapB');
+  if(a)a.onclick=function(){st.mapAdone=true;save();keep(function(){sMap(e)});refreshSteps()};
+  if(b2)b2.onclick=function(){st.mapBdone=true;save();keep(function(){sMap(e)});refreshSteps()};
+}
+function intelScore(){return INTEL.filter(function(x,i){return st.intel[i]===x.k}).length}
+function sIntel(e){
+  ensure();var done=st.intelDone;
+  var h=head(0,'Донесения разведки','Март – июнь 1941 г.')+
+  '<div class="card"><p>Вы аналитик в Москве весной 1941 г. Перед вами восемь сообщений. Для каждого решите, можно ли ему доверять, и в одном предложении объясните почему. После проверки откроется, что было на самом деле.</p></div><div class="intel">';
+  INTEL.forEach(function(x,i){var v=st.intel[i];
+    h+='<article class="tg"><div class="th"><span>№ '+(i+1)+'</span><span>'+x.h+'</span></div><div class="tb"><p><b>Источник:</b> '+x.src+'</p><p>'+x.x+'</p>'+
+    '<div class="vote"><button type="button" class="y'+(v==='y'?' sel':'')+'" data-iv="'+i+'" data-v="y"'+(done?' disabled':'')+'>Можно доверять</button><button type="button" class="n'+(v==='n'?' sel':'')+'" data-iv="'+i+'" data-v="n"'+(done?' disabled':'')+'>Нельзя доверять</button></div>'+
+    '<textarea class="t" data-iw="'+i+'" placeholder="Почему?" style="min-height:70px"'+(done?' readonly':'')+'>'+esc(st.intelWhy[i]||'')+'</textarea>'+
+    (done?'<div class="verdict"><b>'+(v===x.k?'Верно. ':'Ошибка. ')+'</b>'+x.v+'</div>':'')+'</div></article>'});
+  h+='</div>';
+  if(done)h+='<div class="scorebox">Верных оценок: '+intelScore()+' из '+INTEL.length+'</div>';
+  else h+='<div style="margin:6px 0 26px"><button class="btn red" id="intchk" type="button">Проверить оценки</button></div>';
+  h+='<div class="docq">'+ta('intq1','Почему руководство СССР не доверяло точным донесениям? Назовите не меньше двух причин.')+
+     ta('intq2','Сопоставьте донесения с сообщением ТАСС 14 июня 1941 г. (этап «Документы»). Какие из них оно прямо опровергает?')+'</div>';
+  e.innerHTML=h;bindTA(e);
+  $$('[data-iv]',e).forEach(function(b){b.onclick=function(){if(st.intelDone)return;var i=+b.getAttribute('data-iv');st.intel[i]=b.getAttribute('data-v');save();
+    $$('[data-iv="'+i+'"]',e).forEach(function(x){x.classList.toggle('sel',x===b)})}});
+  $$('[data-iw]',e).forEach(function(t){t.oninput=function(){st.intelWhy[+t.getAttribute('data-iw')]=t.value;save()}});
+  var c=$('#intchk');if(c)c.onclick=function(){var n=INTEL.filter(function(x,i){return st.intel[i]}).length;if(n<INTEL.length){toast('Оценено '+n+' из '+INTEL.length);return}
+    var w=INTEL.filter(function(x,i){return (st.intelWhy[i]||'').trim().length<10}).length;if(w){toast('Объясните каждую оценку, не хватает '+w);return}
+    st.intelDone=true;save();keep(function(){sIntel(e)});refreshSteps()};
+}
+function refreshSteps(){var P=PAIRS[st.pair];$$('.steps button').forEach(function(b,i){b.classList.toggle('done',stepDone(st.pair,P.steps[i].id))})}
+var io=null;
+function reveal(now){
+  var els=$$('.card,.doc,.docq,.dos,.qz,.scard,.sim,.pair,.term,.tg,.mapgrid,.tlg,.pos,.tl li');
+  if(!('IntersectionObserver' in window)){return}
+  if(!io)io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -6% 0px'});
+  var vh=window.innerHeight||800;
+  els.forEach(function(el,i){if(el.classList.contains('rv'))return;if(!now&&el.getBoundingClientRect().top<vh){el.classList.add('rv');requestAnimationFrame(function(){requestAnimationFrame(function(){el.classList.add('in')})});return}if(now){el.classList.add('rv','in');return}el.classList.add('rv');if(i%2)el.classList.add('r2');io.observe(el)});
 }
 
 /* ---------- nav ---------- */
